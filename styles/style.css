@@ -54,7 +54,7 @@ body {
 }
 
 /* FF5D5D */
-/* 242424 */
+/* 303030 */
 /* Styles which may generally be used  */
 .padd-top-bottom-3 {
   padding-top: 3px;
@@ -338,8 +338,8 @@ body {
 }
 .menu-links {
   display: inline-block;
-  color: #242424;
-  font-family: "Iran-sans-regular";
+  color: #303030;
+  font-family: "Iran-sans-bold";
   transition: all 0.3s;
   position: relative;
   font-size: 1.1em;
@@ -376,7 +376,7 @@ body {
   width: 100%;
   position: relative;
   text-align: center;
-  color: #242424;
+  color: #303030;
   transition: all 0.3s;
 }
 .sub-link {
