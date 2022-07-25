@@ -35,6 +35,9 @@
   .xs-width-col-12 {
     width: 100%;
   }
+  .email-address {
+    display: none;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
