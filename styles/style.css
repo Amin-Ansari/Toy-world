@@ -49,7 +49,11 @@
   direction: rtl;
   font-family: "B-yekan", "Iran-sans-regular", "Iran-sans-bold";
 }
+body {
+  background-color: #f1f1f1;
+}
 
+/* FF5D5D */
 /* Styles which may generally be used  */
 .padd-top-bottom-3 {
   padding-top: 3px;
