@@ -304,9 +304,8 @@ body {
   display: block;
   color: inherit;
   font-size: 0.88em;
-  padding: 1px;
   text-align: center;
-  line-height: 23px;
+  line-height: 26px;
   transition: all 0.3s;
 }
 .contanct-list {
@@ -328,6 +327,7 @@ body {
 }
 .navigation-container {
   width: inherit;
+  justify-content: space-between;
 }
 
 /* Hover styles */
