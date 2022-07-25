@@ -54,6 +54,7 @@ body {
 }
 
 /* FF5D5D */
+/* 242424 */
 /* Styles which may generally be used  */
 .padd-top-bottom-3 {
   padding-top: 3px;
@@ -329,6 +330,30 @@ body {
   width: inherit;
   justify-content: space-between;
 }
+.logo-link {
+  width: 110px;
+}
+.logo-link > img {
+  width: inherit;
+}
+.menu-links {
+  display: inline-block;
+  color: #242424;
+  font-family: "Iran-sans-regular";
+  transition: all 0.3s;
+  position: relative;
+}
+.menu-links::after {
+  content: "";
+  background-color: #ff5d5d;
+  position: absolute;
+  bottom: 0px;
+  right: 50%;
+  width: 0%;
+  height: 2px;
+  transform: translateX(50%);
+  transition: all 0.5s;
+}
 
 /* Hover styles */
 .icons:hover {
@@ -337,4 +362,8 @@ body {
 .contact-ietms > a:hover {
   text-decoration: underline;
 }
+.menu-links:hover::after {
+  width: 100%;
+}
+
 /* Animations */

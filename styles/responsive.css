@@ -38,6 +38,9 @@
   .email-address {
     display: none;
   }
+  .menu {
+    display: none;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
@@ -75,6 +78,9 @@
   }
   .sm-width-col-12 {
     width: 100%;
+  }
+  .menu {
+    display: none;
   }
 }
 @media all and (min-width: 768px) {
@@ -114,6 +120,9 @@
   .md-width-col-12 {
     width: 100%;
   }
+  .menu {
+    display: none;
+  }
 }
 @media all and (min-width: 992px) {
   .lg-width-col-1 {
@@ -151,6 +160,9 @@
   }
   .lg-width-col-12 {
     width: 100%;
+  }
+  .menu {
+    display: flex;
   }
 }
 @media all and (min-width: 1200px) {
@@ -190,6 +202,9 @@
   .xl-width-col-12 {
     width: 100%;
   }
+  .menu {
+    display: flex;
+  }
 }
 @media all and (min-width: 1400px) {
   .xxl-width-col-1 {
@@ -227,6 +242,9 @@
   }
   .xxl-width-col-12 {
     width: 100%;
+  }
+  .menu {
+    display: flex;
   }
 }
 .container-fluid {
