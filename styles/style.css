@@ -1,3 +1,44 @@
+@font-face {
+  font-family: "Iran-sans-regular";
+  src: url(../fonts/Font_IRAN_Sans_Regular/IRANSans.eot?#iefix)
+      format("embedded-opentype"),
+    url(../fonts/Font_IRAN_Sans_Regular/IRANSans.eot)
+      format("embedded-opentype"),
+    url(../fonts/Font_IRAN_Sans_Regular/IRANSans.svg) format("svg"),
+    url(../fonts/Font_IRAN_Sans_Regular/IRANSans.ttf) format("trutype"),
+    url(../fonts/Font_IRAN_Sans_Regular/IRANSans.woff) format("woff"),
+    url(../fonts/Font_IRAN_Sans_Regular/IRANSans.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Iran-sans-bold";
+  src: url(../fonts/Font_IRAN_Sans_Bold/IRANSans-Bold.eot?#iefix)
+      format("embedded-opentype"),
+    url(../fonts/Font_IRAN_Sans_Bold/IRANSans-Bold.eot)
+      format("embedded-opentype"),
+    url(../fonts/Font_IRAN_Sans_Bold/IRANSans-Bold.svg) format("svg"),
+    url(../fonts/Font_IRAN_Sans_Bold/IRANSans-Bold.ttf) format("truetype"),
+    url(../fonts/Font_IRAN_Sans_Bold/IRANSans-Bold.woff) format("woff"),
+    url(../fonts/Font_IRAN_Sans_Bold/IRANSans-Bold.woff2) format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "B-yekan";
+  src: url(../fonts/B_Yekan/BYekan.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/B_Yekan/BYekan.eot) format("embedded-opentype"),
+    url(../fonts/B_Yekan/BYekan.svg) format("svg"),
+    url(../fonts/B_Yekan/BYekan.ttf) format("truetype"),
+    url(../fonts/B_Yekan/BYekan.woff) format("woff"),
+    url(../fonts/B_Yekan/BYekan.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -5,4 +46,5 @@
   list-style-type: none;
   scroll-behavior: smooth;
   text-decoration: none;
+  font-family: "B-yekan", "Iran-sans-regular", "Iran-sans-bold";
 }
