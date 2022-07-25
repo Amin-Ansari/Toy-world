@@ -404,6 +404,20 @@ body {
   line-height: 18px;
   font-size: 1em;
 }
+.sub-menu-button {
+  width: 33px;
+  height: 33px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  transition: all 0.3s;
+}
+.bars {
+  width: 80%;
+  height: 3px;
+  background-color: black;
+  margin: 4px auto;
+}
 
 /* Hover styles */
 .icons:hover {
@@ -419,6 +433,7 @@ body {
   color: #fff;
   background-color: #ff5d5d;
 }
+
 /* Animations */
 
 @keyframes sumShow {

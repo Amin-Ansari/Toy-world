@@ -44,6 +44,9 @@
   .mobile-menu {
     display: flex;
   }
+  .sub-menu-button {
+    display: block;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
@@ -87,6 +90,9 @@
   }
   .mobile-menu {
     display: flex;
+  }
+  .sub-menu-button {
+    display: block;
   }
 }
 @media all and (min-width: 768px) {
@@ -132,6 +138,9 @@
   .mobile-menu {
     display: flex;
   }
+  .sub-menu-button {
+    display: block;
+  }
 }
 @media all and (min-width: 992px) {
   .lg-width-col-1 {
@@ -174,6 +183,9 @@
     display: flex;
   }
   .mobile-menu {
+    display: none;
+  }
+  .sub-menu-button {
     display: none;
   }
 }
@@ -220,6 +232,9 @@
   .mobile-menu {
     display: none;
   }
+  .sub-menu-button {
+    display: none;
+  }
 }
 @media all and (min-width: 1400px) {
   .xxl-width-col-1 {
@@ -262,6 +277,9 @@
     display: flex;
   }
   .mobile-menu {
+    display: none;
+  }
+  .sub-menu-button {
     display: none;
   }
 }
