@@ -294,8 +294,8 @@ body {
 }
 .icon-items {
   border-radius: 100px;
-  width: 26px;
-  height: 26px;
+  width: 25px;
+  height: 25px;
   overflow: hidden;
 }
 
@@ -304,10 +304,10 @@ body {
   height: 100%;
   display: block;
   color: inherit;
-  font-size: 0.85em;
+  font-size: 0.88em;
   padding: 1px;
   text-align: center;
-  line-height: 25px;
+  line-height: 23px;
   transition: all 0.3s;
 }
 
