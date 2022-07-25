@@ -354,6 +354,56 @@ body {
   transform: translateX(50%);
   transition: all 0.5s;
 }
+.mobile-menu {
+  width: inherit;
+  background: #fff;
+  position: absolute;
+  top: 89px;
+  right: 50%;
+  transform: translateX(50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  clip-path: circle(0px at left top);
+}
+.show-sub {
+  animation: sumShow 1s ease-out 0s 1 normal forwards;
+}
+.mobile-menu > ul {
+  width: 100%;
+}
+.sub-item {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: #242424;
+  transition: all 0.3s;
+}
+.sub-link {
+  font-size: 1.5em;
+  color: inherit;
+  font-family: "Iran-sans-regular";
+  transition: all 0.3s;
+}
+.shop-basket {
+  border: none;
+  font-family: "Font Awesome 5 Free";
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.bsket-length {
+  position: absolute;
+  top: 1px;
+  right: -4px;
+  background-color: #ff5d5d;
+  color: #fff;
+  border-radius: 100%;
+  width: 19px;
+  height: 19px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 1em;
+}
 
 /* Hover styles */
 .icons:hover {
@@ -365,5 +415,14 @@ body {
 .menu-links:hover::after {
   width: 100%;
 }
-
+.sub-item:hover {
+  color: #fff;
+  background-color: #ff5d5d;
+}
 /* Animations */
+
+@keyframes sumShow {
+  100% {
+    clip-path: circle(150% at left top);
+  }
+}
