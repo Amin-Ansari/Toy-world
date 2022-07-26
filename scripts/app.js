@@ -6,7 +6,7 @@ basketButton.addEventListener("click", showBasket);
 document.addEventListener("click", function (eventOb) {
   if (eventOb.target.classList.contains("basket-stored")) {
     showBasket();
-  } else if (eventOb.target.nodeName == "I") {
+  } else if (eventOb.target.classList.contains("fa-xmark")) {
     showBasket();
   }
 });

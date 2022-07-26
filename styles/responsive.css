@@ -47,6 +47,9 @@
   .sub-menu-button {
     display: block;
   }
+  .scroll-donw-link {
+    display: none;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
@@ -93,6 +96,9 @@
   }
   .sub-menu-button {
     display: block;
+  }
+  .scroll-donw-link {
+    display: none;
   }
 }
 @media all and (min-width: 768px) {
@@ -141,6 +147,9 @@
   .sub-menu-button {
     display: block;
   }
+  .scroll-donw-link {
+    display: none;
+  }
 }
 @media all and (min-width: 992px) {
   .lg-width-col-1 {
@@ -187,6 +196,9 @@
   }
   .sub-menu-button {
     display: none;
+  }
+  .scroll-donw-link {
+    display: flex;
   }
 }
 @media all and (min-width: 1200px) {
