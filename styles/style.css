@@ -430,6 +430,46 @@ body {
 .opened:nth-of-type(3) {
   transform: translate(0px, -1px) rotateZ(130deg);
 }
+.basket-stored {
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  display: none;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #3030306b;
+  transition: all 0.3s;
+}
+.basket-cards {
+  height: 280px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+.card-section {
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.322);
+}
+.card-section > h6 {
+  font-family: "Iran-sans-regular";
+  color: #303030;
+  font-size: 1.5em;
+}
+.card-section > i {
+  color: #303030;
+  font-size: 1.7em;
+  align-items: center;
+}
+.cards-flex {
+  display: flex;
+}
+.scale-normal {
+  transform: scale(1);
+}
 
 /* Hover styles */
 .icons:hover {
@@ -451,5 +491,10 @@ body {
 @keyframes sumShow {
   100% {
     clip-path: circle(150% at left top);
+  }
+}
+@keyframes scaleNorm {
+  100% {
+    transform: scale(1);
   }
 }
