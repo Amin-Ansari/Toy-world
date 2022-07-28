@@ -38,7 +38,7 @@ function showBasket() {
 }
 function sectionScale(element) {
   let elementLocation = element.getBoundingClientRect();
-  if (window.scrollY * 2 >= elementLocation.top - 100) {
+  if (elementLocation.top <= 800) {
     if (!element.classList.contains("category-show-up")) {
       element.classList.add("category-show-up");
     }
