@@ -556,6 +556,24 @@ body {
   border-radius: 100%;
   animation: scroll-down 1.2s ease 0s infinite normal forwards;
 }
+.category-content {
+  width: inherit;
+}
+.category-list {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.wooden-toy {
+  background-color: #fb416b;
+  border-radius: 8px;
+}
+.stuffed-toys {
+  background-color: #ffc12c;
+  border-radius: 8px;
+}
 
 /* Hover styles */
 .icons:hover {
