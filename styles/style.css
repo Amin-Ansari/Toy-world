@@ -612,6 +612,12 @@ body {
 }
 .category-content {
   width: inherit;
+  opacity: 0;
+  transform: scale(0);
+  animation: scaleOne 1.5s ease 0s 1 normal forwards;
+}
+.category-show-up {
+  animation: acaleOne 1.2s ease 0s infinite normal forwards;
 }
 .category-list {
   width: 100%;
@@ -687,8 +693,13 @@ body {
   }
 }
 @keyframes scaleOne {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes scroll-down {
