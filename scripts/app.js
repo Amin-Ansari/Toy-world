@@ -1,5 +1,6 @@
 let submenuButton = document.querySelector(".sub-menu-button");
 let basketButton = document.querySelector(".shop-basket");
+let categorySection = document.querySelector(".category-section");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -9,6 +10,9 @@ document.addEventListener("click", function (eventOb) {
   } else if (eventOb.target.classList.contains("fa-xmark")) {
     showBasket();
   }
+});
+document.addEventListener("scroll", () => {
+  sectionScale(categorySection);
 });
 
 function showSubMenu() {
@@ -29,4 +33,15 @@ function showBasket() {
   setTimeout(() => {
     basketCard.classList.toggle("scale-normal");
   }, 50);
+}
+function sectionScale(section) {
+  let locationNum = section.clientHeight;
+  if (document.documentElement.scrollTop >= locationNum / 2) {
+    if (
+      !categorySection.firstElementChild.classList.contains("category-show-up")
+    ) {
+      categorySection.firstElementChild.classList.add("category-show-up");
+      console.log("locationNum");
+    }
+  }
 }

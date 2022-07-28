@@ -614,10 +614,9 @@ body {
   width: inherit;
   opacity: 0;
   transform: scale(0);
-  animation: scaleOne 1.5s ease 0s 1 normal forwards;
 }
 .category-show-up {
-  animation: acaleOne 1.2s ease 0s infinite normal forwards;
+  animation: scaleOne 1s ease 0s 1 normal forwards;
 }
 .category-list {
   width: 100%;
