@@ -539,6 +539,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: scale(0);
+  animation: scaleOne 0.8s ease 1s 1 normal forwards;
 }
 .inner-animation {
   width: 45%;
