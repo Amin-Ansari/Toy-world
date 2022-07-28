@@ -1,6 +1,6 @@
 let submenuButton = document.querySelector(".sub-menu-button");
 let basketButton = document.querySelector(".shop-basket");
-let categorySection = document.querySelector(".category-section");
+let categoryItems = document.querySelectorAll(".category-list>li");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -12,7 +12,9 @@ document.addEventListener("click", function (eventOb) {
   }
 });
 document.addEventListener("scroll", () => {
-  sectionScale(categorySection);
+  for (let element of categoryItems) {
+    sectionScale(element);
+  }
 });
 
 function showSubMenu() {
@@ -34,13 +36,11 @@ function showBasket() {
     basketCard.classList.toggle("scale-normal");
   }, 50);
 }
-function sectionScale(section) {
-  let locationNum = section.clientHeight;
-  if (document.documentElement.scrollTop >= locationNum / 2) {
-    if (
-      !categorySection.firstElementChild.classList.contains("category-show-up")
-    ) {
-      categorySection.firstElementChild.classList.add("category-show-up");
+function sectionScale(element) {
+  let elementLocation = element.getBoundingClientRect();
+  if (window.scrollY * 2 >= elementLocation.top - 100) {
+    if (!element.classList.contains("category-show-up")) {
+      element.classList.add("category-show-up");
     }
   }
 }

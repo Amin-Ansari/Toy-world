@@ -612,8 +612,6 @@ body {
 }
 .category-content {
   width: inherit;
-  opacity: 0;
-  transform: scale(0);
 }
 .category-show-up {
   animation: scaleOne 1s ease 0s 1 normal forwards;
@@ -623,6 +621,10 @@ body {
   height: 100%;
   justify-content: center;
   flex-flow: row wrap;
+}
+.category-list > li {
+  opacity: 0;
+  transform: scale(0);
 }
 .wooden-toys {
   background-color: #fb416b;
