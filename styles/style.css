@@ -565,7 +565,12 @@ body {
   justify-content: center;
   flex-flow: row wrap;
 }
-
+.buy-category-link {
+  background-color: #fff;
+  color: #303030;
+  border-radius: 20px;
+  font-size: 1.7em;
+}
 .wooden-toy {
   background-color: #fb416b;
   border-radius: 8px;
