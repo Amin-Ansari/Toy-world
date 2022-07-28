@@ -109,6 +109,22 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.padd-right-left-55 {
+  padding-right: 55px;
+  padding-left: 5px;
+}
+.padd-right-left-60 {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+.padd-right-left-65 {
+  padding-right: 65px;
+  padding-left: 65px;
+}
+.padd-right-left-70 {
+  padding-right: 70px;
+  padding-left: 70px;
+}
 .padd-right-left-3 {
   padding-right: 3px;
   padding-bottom: 3px;
@@ -161,6 +177,22 @@ body {
   padding-right: 50px;
   padding-left: 50px;
 }
+.padd-right-left-55 {
+  padding-right: 55px;
+  padding-left: 5px;
+}
+.padd-right-left-60 {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+.padd-right-left-65 {
+  padding-right: 65px;
+  padding-left: 65px;
+}
+.padd-right-left-70 {
+  padding-right: 70px;
+  padding-left: 70px;
+}
 .margin-top-bottom-3 {
   margin-top: 3px;
   margin-bottom: 3px;
@@ -212,6 +244,22 @@ body {
 .margin-top-bottom-50 {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+.padd-top-bottom-55 {
+  padding-top: 55px;
+  padding-bottom: 5px;
+}
+.padd-top-bottom-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.padd-top-bottom-65 {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.padd-top-bottom-70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .margin-right-left-3 {
   margin-right: 3px;
@@ -472,7 +520,7 @@ body {
   animation: scaleOne 0.4s ease 0.2s 1 normal forwards;
 }
 .image-section {
-  height: 575px;
+  height: 640px;
   background: url(../images/image-seciton-background.jpg) no-repeat center
     center;
   background-size: cover;
@@ -556,6 +604,12 @@ body {
   border-radius: 100%;
   animation: scroll-down 1.2s ease 0s infinite normal forwards;
 }
+.sub-menu-button {
+  display: none;
+}
+.category-section {
+  padding-top: 40px;
+}
 .category-content {
   width: inherit;
 }
@@ -565,19 +619,39 @@ body {
   justify-content: center;
   flex-flow: row wrap;
 }
+.wooden-toys {
+  background-color: #fb416b;
+  border-radius: 8px;
+  flex-flow: row wrap-reverse;
+}
+.stuffed-toys {
+  background-color: #ffc12c;
+  border-radius: 8px;
+  flex-flow: row wrap-reverse;
+}
+.category-title {
+  color: #fff;
+  font-size: 2em;
+  font-weight: normal;
+  font-family: "B-yekan";
+}
 .buy-category-link {
   background-color: #fff;
   color: #303030;
   border-radius: 20px;
   font-size: 1.7em;
 }
-.wooden-toy {
-  background-color: #fb416b;
-  border-radius: 8px;
+.imge-part {
+  height: 138px;
+  position: relative;
 }
-.stuffed-toys {
-  background-color: #ffc12c;
-  border-radius: 8px;
+.category-image {
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  width: 220px;
+  height: 220px;
+  transform: translateX(50%);
 }
 
 /* Hover styles */
