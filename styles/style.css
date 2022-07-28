@@ -645,6 +645,8 @@ body {
   color: #303030;
   border-radius: 20px;
   font-size: 1.7em;
+  display: inline-block;
+  transition: all 0.3s;
 }
 .imge-part {
   height: 138px;
@@ -682,6 +684,10 @@ body {
 .inner-context > a:hover {
   transform: scale(1.1);
   box-shadow: #ff5d5d 0px 25px 20px -20px;
+}
+.buy-category-link:hover {
+  transform: scale(1.1);
+  box-shadow: #fff 0px 25px 20px -20px;
 }
 
 /* Animations */
