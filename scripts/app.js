@@ -41,7 +41,6 @@ function sectionScale(section) {
       !categorySection.firstElementChild.classList.contains("category-show-up")
     ) {
       categorySection.firstElementChild.classList.add("category-show-up");
-      console.log("locationNum");
     }
   }
 }

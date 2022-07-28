@@ -47,6 +47,9 @@
   .sub-menu-button {
     display: block;
   }
+  .category-context {
+    text-align: center;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
@@ -94,6 +97,9 @@
   .sub-menu-button {
     display: block;
   }
+  .category-context {
+    text-align: center;
+  }
 }
 @media all and (min-width: 768px) {
   .md-width-col-1 {
@@ -140,6 +146,9 @@
   }
   .sub-menu-button {
     display: block;
+  }
+  .category-context {
+    text-align: center;
   }
 }
 @media all and (min-width: 992px) {
@@ -191,6 +200,9 @@
   .scroll-donw-link {
     display: flex;
   }
+  .category-context {
+    text-align: right;
+  }
 }
 @media all and (min-width: 1200px) {
   .xl-width-col-1 {
@@ -234,6 +246,9 @@
   }
   .mobile-menu {
     display: none;
+  }
+  .category-context {
+    text-align: right;
   }
 }
 @media all and (min-width: 1400px) {
