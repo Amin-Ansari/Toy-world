@@ -653,6 +653,12 @@ body {
   height: 220px;
   transform: translateX(50%);
 }
+.scroll-anchor {
+  position: absolute;
+  bottom: 0px;
+  right: 50%;
+  transform: translateX(50%);
+}
 
 /* Hover styles */
 .icons:hover {
