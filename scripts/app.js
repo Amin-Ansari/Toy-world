@@ -3,6 +3,7 @@ let basketButton = document.querySelector(".shop-basket");
 let categoryItems = document.querySelectorAll(".category-list>li");
 let categoryListItem = document.querySelectorAll(".category-list-items");
 let scrollButton = document.querySelector(".scroll-donw-link");
+let videoDiv = document.querySelector(".video-part");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -20,6 +21,7 @@ document.addEventListener("scroll", () => {
   for (let element of categoryListItem) {
     sectionScale(element);
   }
+  sectionScale(videoDiv);
 });
 scrollButton.addEventListener("click", function () {
   document.documentElement.scrollTop =
