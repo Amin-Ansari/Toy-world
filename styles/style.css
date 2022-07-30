@@ -681,20 +681,21 @@ body {
   align-items: center;
   position: relative;
 }
-.section-title::before {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  right: 0px;
-  width: 22%;
-  height: 3px;
-  border-radius: 15px;
-  background-color: #ff5d5d;
-}
 .section-title > h3 {
   font-size: 2em;
   font-family: "B-yekan";
   font-weight: normal;
+  position: relative;
+}
+.section-title > h3::before {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  right: 0px;
+  width: 70%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: #ff5d5d;
 }
 .section-title > a {
   color: inherit;
