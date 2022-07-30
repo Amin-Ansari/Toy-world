@@ -1,6 +1,7 @@
 let submenuButton = document.querySelector(".sub-menu-button");
 let basketButton = document.querySelector(".shop-basket");
 let categoryItems = document.querySelectorAll(".category-list>li");
+let scrollButton = document.querySelector(".scroll-donw-link");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -15,6 +16,10 @@ document.addEventListener("scroll", () => {
   for (let element of categoryItems) {
     sectionScale(element);
   }
+});
+scrollButton.addEventListener("click", function () {
+  document.documentElement.scrollTop =
+    document.documentElement.clientHeight * 0.25;
 });
 
 function showSubMenu() {
