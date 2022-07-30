@@ -728,6 +728,8 @@ body {
   border-radius: 10px;
   color: #303030;
   text-align: center;
+  box-shadow: 0px 0px 8px -4px rgba(83, 83, 83, 0.329);
+  transition: all 0.3s;
 }
 .category-list-items > h4,
 .price {
@@ -770,6 +772,10 @@ body {
 }
 .section-title > a:hover::before {
   background-color: #ff5d5d;
+}
+.category-list-items:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* Animations */
