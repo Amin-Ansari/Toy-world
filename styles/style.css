@@ -322,6 +322,9 @@ body {
 .cross-axis-center {
   align-items: center;
 }
+.full-width-image {
+  width: 100%;
+}
 
 /* Specific styles */
 .header-container {
