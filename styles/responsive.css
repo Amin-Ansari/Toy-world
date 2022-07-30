@@ -50,6 +50,15 @@
   .category-context {
     text-align: center;
   }
+  .section-title > h3 {
+    font-size: 1.4em;
+    font-family: "B-yekan";
+    font-weight: normal;
+  }
+  .section-title > a {
+    color: inherit;
+    font-size: 0.8em;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
