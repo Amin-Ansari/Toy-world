@@ -19,7 +19,7 @@ document.addEventListener("scroll", () => {
 });
 scrollButton.addEventListener("click", function () {
   document.documentElement.scrollTop =
-    document.documentElement.clientHeight * 0.25;
+    document.documentElement.clientHeight * 0.5;
 });
 
 function showSubMenu() {
