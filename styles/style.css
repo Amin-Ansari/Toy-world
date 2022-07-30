@@ -730,6 +730,8 @@ body {
   text-align: center;
   box-shadow: 0px 0px 8px -4px rgba(83, 83, 83, 0.329);
   transition: all 0.3s;
+  opacity: 0;
+  transform: scale(0);
 }
 .category-list-items > h4,
 .price {
