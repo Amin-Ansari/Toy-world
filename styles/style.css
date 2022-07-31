@@ -841,8 +841,9 @@ body {
   width: 100%;
   text-align: center;
 }
+
 .email-in {
-  width: 70%;
+  width: 69%;
   border-radius: 5px;
   height: 45px;
   background-color: #f8f8f8;
@@ -858,6 +859,8 @@ input[type="button"] {
   border-radius: 50px;
   color: #fff;
   font-size: 1.2em;
+  transition: all 0.3s;
+  margin-right: 3px;
 }
 
 /* Hover styles */
@@ -891,6 +894,10 @@ input[type="button"] {
 }
 .video-container > i:hover {
   color: #e4e4e4;
+}
+input[type="button"]:hover {
+  transform: scale(1.05);
+  box-shadow: #ff5d5d 0px 25px 20px -17px;
 }
 
 /* Animations */
