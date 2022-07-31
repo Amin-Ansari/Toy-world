@@ -8,6 +8,7 @@ let playButton = document.querySelector(".play-icon");
 let container = document.querySelector(".video-container");
 let video = document.querySelector(".video-container>video");
 let subscribeSection = document.querySelector(".subscribe-part");
+let emailInput = document.querySelector(".email-in");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -35,6 +36,7 @@ scrollButton.addEventListener("click", function () {
     document.documentElement.clientHeight * 0.5;
 });
 playButton.addEventListener("click", playVideo);
+emailInput.addEventListener("blur", inputValidation);
 
 function showSubMenu() {
   barsTransform();
@@ -60,7 +62,6 @@ function showBasket() {
 */
 function sectionScale(element) {
   let elementLocation = element.getBoundingClientRect();
-  console.log(elementLocation.top);
   if (elementLocation.top <= 850) {
     if (!element.classList.contains("category-show-up")) {
       element.classList.add("category-show-up");
@@ -83,5 +84,19 @@ function puaseVideo(eventOb) {
     if (video.classList.contains("category-show-up")) {
       video.classList.remove("category-show-up");
     }
+  }
+}
+function inputValidation() {
+  let addsignIndex = this.value.indexOf("@");
+  if (addsignIndex <= 0 && this.value.length) {
+    if (!this.classList.contains("unvalidEmail")) {
+      this.classList.add("unvalidEmail");
+      this.nextElementSibling.classList.add("show-state");
+      console.log(this.value.length);
+    }
+  } else {
+    console.log(this.value.length);
+    this.classList.remove("unvalidEmail");
+    this.nextElementSibling.classList.remove("show-state");
   }
 }

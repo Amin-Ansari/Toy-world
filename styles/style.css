@@ -841,8 +841,11 @@ body {
 .sub-form form {
   width: 100%;
   text-align: center;
+  flex-flow: row wrap;
 }
-
+.email-input-conainer {
+  position: relative;
+}
 .email-in {
   border-radius: 5px;
   height: 45px;
@@ -851,6 +854,19 @@ body {
   border-radius: 50px;
   outline: none;
   font-size: 1em;
+  position: relative;
+  transition: all 0.3s;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.unvalidEmail {
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.281);
+  color: #fff;
+}
+.unvalidEmail::placeholder {
+  color: #575757;
 }
 input[type="button"] {
   background-color: #ff5d5d;
@@ -860,6 +876,19 @@ input[type="button"] {
   color: #fff;
   font-size: 1.2em;
   transition: all 0.3s;
+  width: 100%;
+  transition: all 0.3s;
+}
+.email-input-state {
+  font-size: 1.1em;
+  width: 100%;
+  color: #ff5d5d;
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.3s;
+}
+.show-state {
+  height: 36px !important;
 }
 
 /* Hover styles */

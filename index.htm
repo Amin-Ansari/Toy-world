@@ -423,22 +423,29 @@
           class="xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-6 xl-width-col-6 xxl-width-col-6 sub-form dis-flex"
         >
           <form
-            class="padd-top-bottom-30"
+            class="padd-top-bottom-30 dis-flex"
             action="javascript:void(0)"
             method="post"
           >
-            <input
-              class="email-in padd-right-left-10 xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-8 xl-width-col-8 xxl-width-col-8 margin-top-bottom-5"
-              type="email"
-              name="email-input"
-              id="email-sub"
-              placeholder="  ایمیل خود را وارد نمایید"
-            />
-            <input
-              class="email-in padd-right-left-10 xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-2 xl-width-col-2 xxl-width-col-2 margin-top-bottom-5"
-              type="button"
-              value="عضویت"
-            />
+            <div
+              class="xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-8 xl-width-col-8 xxl-width-col-8 padd-right-left-5"
+            >
+              <input
+                class="padd-right-left-10 email-in"
+                type="email"
+                name="email-input"
+                id="email-sub"
+                placeholder="  ایمیل خود را وارد نمایید"
+              />
+              <p class="email-input-state padd-top-bottom-5">
+                فرمت وارد شده صحیح نمیباشد
+              </p>
+            </div>
+            <div
+              class="xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-2 xl-width-col-2 xxl-width-col-2 padd-right-left-5"
+            >
+              <input type="button" value="عضویت" />
+            </div>
           </form>
         </div>
       </div>
