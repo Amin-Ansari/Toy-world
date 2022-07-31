@@ -15,7 +15,7 @@ document.addEventListener("click", puaseVideo);
 document.addEventListener("click", function (eventOb) {
   if (eventOb.target.classList.contains("basket-stored")) {
     showBasket();
-  } else if (eventOb.target.classList.contains("fa-xmark")) {
+  } else if (eventOb.target.classList.contains("basket-close-btn")) {
     showBasket();
   }
 });
@@ -71,7 +71,10 @@ function playVideo() {
 }
 function puaseVideo(eventOb) {
   let container = document.querySelector(".video-container");
-  if (eventOb.target == container) {
+  if (
+    eventOb.target == container ||
+    eventOb.target.classList.contains("video-close")
+  ) {
     video.pause();
     video.currentTime = 0;
     container.classList.replace("dis-flex", "dis-none");
