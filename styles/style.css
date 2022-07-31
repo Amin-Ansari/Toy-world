@@ -898,19 +898,33 @@ input[type="button"] {
   width: 100%;
   flex-flow: row wrap;
 }
-.instagram-post-content {
-  width: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0px 0px 8px 0px rgba(107, 107, 107, 0.568);
+.image-list li {
+  perspective: 1000px;
 }
-.link-post {
+.post-content {
+  position: relative;
+  transition: all 1s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.post-content > img {
+  position: relative;
+  z-index: 2;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px -2px #4646466b;
+}
+.hover-side {
+  position: absolute;
+  top: 0px;
+  right: 0px;
   width: 100%;
   height: 100%;
-  display: inline-block;
-  position: relative;
-  background-color: red;
-  padding: none;
+  background-color: #ff5d5d;
+  z-index: 1;
+  transform: rotateY(-180deg);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 7em;
 }
 .instagram-follow {
   font-size: 1.7em;
@@ -973,7 +987,9 @@ input[type="button"]:hover {
   transform: scale(1.1);
   box-shadow: #ff5d5d 0px 25px 20px -18px;
 }
-
+.image-list li:hover .post-content {
+  transform: rotateY(180deg);
+}
 /* Animations */
 
 @keyframes sumShow {
