@@ -9,6 +9,7 @@ let container = document.querySelector(".video-container");
 let video = document.querySelector(".video-container>video");
 let subscribeSection = document.querySelector(".subscribe-part");
 let emailInput = document.querySelector(".email-in");
+let instagrampost = document.querySelectorAll(".image-list li");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -30,6 +31,9 @@ document.addEventListener("scroll", () => {
   }
   sectionScale(videoDiv);
   sectionScale(subscribeSection);
+  for (let element of instagrampost) {
+    sectionScale(element);
+  }
 });
 scrollButton.addEventListener("click", function () {
   document.documentElement.scrollTop =

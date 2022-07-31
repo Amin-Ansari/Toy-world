@@ -900,6 +900,8 @@ input[type="button"] {
 }
 .image-list li {
   perspective: 1000px;
+  opacity: 0px;
+  transform: scale(0);
 }
 .post-content {
   position: relative;
@@ -945,6 +947,9 @@ input[type="button"] {
   font-size: 1.2em;
   transition: all 0.3s;
   display: inline-block;
+}
+footer {
+  background: #ff5d5d;
 }
 
 /* Hover styles */
