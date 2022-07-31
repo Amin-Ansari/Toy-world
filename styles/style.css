@@ -815,6 +815,50 @@ body {
   cursor: pointer;
   transition: all 0.3s;
 }
+.subscribe-part {
+  align-items: center;
+  flex-flow: column wrap;
+}
+.subscribe-part {
+  width: inherit;
+  background: #fff;
+  border-radius: 12px;
+  flex-flow: row wrap;
+  box-shadow: 0px 0px 8px -5px #64646477;
+}
+.sub-description > i {
+  color: #ff5d5d;
+  font-size: 4em;
+}
+.sub-description p {
+  font-size: 2em;
+  color: #303030;
+}
+.sub-description p > span {
+  color: #ff5d5d;
+}
+.sub-form form {
+  width: 100%;
+  text-align: center;
+}
+.email-in {
+  width: 70%;
+  border-radius: 5px;
+  height: 45px;
+  background-color: #f8f8f8;
+  border: 1px solid #e5e5e5;
+  border-radius: 50px;
+  outline: none;
+  font-size: 1em;
+}
+input[type="button"] {
+  background-color: #ff5d5d;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.2em;
+}
 
 /* Hover styles */
 .icons:hover {

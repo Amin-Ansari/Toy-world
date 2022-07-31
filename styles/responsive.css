@@ -59,6 +59,10 @@
     color: inherit;
     font-size: 0.8em;
   }
+  .sub-description {
+    text-align: center;
+    flex-flow: column wrap;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
@@ -109,6 +113,10 @@
   .category-context {
     text-align: center;
   }
+  .sub-description {
+    text-align: center;
+    flex-flow: column wrap;
+  }
 }
 @media all and (min-width: 768px) {
   .md-width-col-1 {
@@ -158,6 +166,10 @@
   }
   .category-context {
     text-align: center;
+  }
+  .sub-description {
+    text-align: center;
+    flex-flow: column wrap;
   }
 }
 @media all and (min-width: 992px) {
@@ -211,6 +223,10 @@
   }
   .category-context {
     text-align: right;
+  }
+  .sub-description {
+    text-align: right;
+    flex-flow: row wrap;
   }
 }
 @media all and (min-width: 1200px) {
