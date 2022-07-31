@@ -7,6 +7,7 @@ let videoDiv = document.querySelector(".video-part");
 let playButton = document.querySelector(".play-icon");
 let container = document.querySelector(".video-container");
 let video = document.querySelector(".video-container>video");
+let subscribeSection = document.querySelector(".subscribe-part");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -27,6 +28,7 @@ document.addEventListener("scroll", () => {
     sectionScale(element);
   }
   sectionScale(videoDiv);
+  sectionScale(subscribeSection);
 });
 scrollButton.addEventListener("click", function () {
   document.documentElement.scrollTop =
@@ -59,7 +61,7 @@ function showBasket() {
 function sectionScale(element) {
   let elementLocation = element.getBoundingClientRect();
   console.log(elementLocation.top);
-  if (elementLocation.top <= 900) {
+  if (elementLocation.top <= 850) {
     if (!element.classList.contains("category-show-up")) {
       element.classList.add("category-show-up");
     }
