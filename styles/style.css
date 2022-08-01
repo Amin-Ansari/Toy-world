@@ -510,13 +510,15 @@ body {
   border-bottom: 1px solid rgba(128, 128, 128, 0.322);
 }
 .card-section > h6 {
-  font-family: "Iran-sans-regular";
+  font-weight: normal;
   color: #303030;
   font-size: 1.4em;
 }
 .card-section > i {
+  font-size: 1.5em;
   color: #303030;
-  font-size: 1.7em;
+  padding-top: 6px;
+
   align-items: center;
 }
 .cards-flex {
