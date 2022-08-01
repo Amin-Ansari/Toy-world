@@ -962,6 +962,7 @@ footer {
   display: inline-block;
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 .copy-right {
   border-top: 1px solid rgba(255, 255, 255, 0.404);
@@ -969,7 +970,16 @@ footer {
 }
 .footer-menu-item > a {
   color: inherit;
+  font-size: 1em;
+}
+.footer-social {
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
   font-size: 1.1em;
+  padding-top: 1px;
+  transition: all 0.3s;
+  overflow: hidden;
 }
 
 /* Hover styles */
@@ -1014,6 +1024,9 @@ input[type="button"]:hover {
 }
 .image-list li:hover .post-content {
   transform: rotateY(180deg);
+}
+.footer-social:hover {
+  background-color: rgba(177, 177, 177, 0.164);
 }
 
 /* Animations */
