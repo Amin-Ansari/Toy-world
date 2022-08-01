@@ -63,9 +63,6 @@
     text-align: center;
     flex-flow: column wrap;
   }
-  .copy-right {
-    text-align: center;
-  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
@@ -120,9 +117,6 @@
     text-align: center;
     flex-flow: column wrap;
   }
-  .copy-right {
-    text-align: center;
-  }
 }
 @media all and (min-width: 768px) {
   .md-width-col-1 {
@@ -176,9 +170,6 @@
   .sub-description {
     text-align: center;
     flex-flow: column wrap;
-  }
-  .copy-right {
-    text-align: center;
   }
 }
 @media all and (min-width: 992px) {
@@ -236,9 +227,6 @@
   .sub-description {
     text-align: right;
     flex-flow: row wrap;
-  }
-  .copy-right {
-    text-align: right;
   }
 }
 @media all and (min-width: 1200px) {

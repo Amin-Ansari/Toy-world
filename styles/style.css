@@ -967,10 +967,25 @@ footer {
 .copy-right {
   border-top: 1px solid rgba(255, 255, 255, 0.404);
   font-size: 1em;
+  text-align: center;
 }
 .footer-menu-item > a {
   color: inherit;
   font-size: 1em;
+  transition: all 0.3s;
+}
+.footer-menu-item {
+  position: relative;
+}
+.footer-menu-item::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0px;
+  height: 1px;
+  width: 0%;
+  background-color: #fff;
+  transition: all 0.3s;
 }
 .footer-social {
   width: 25px;
@@ -1026,7 +1041,10 @@ input[type="button"]:hover {
   transform: rotateY(180deg);
 }
 .footer-social:hover {
-  background-color: rgba(177, 177, 177, 0.164);
+  background-color: rgba(177, 177, 177, 0.103);
+}
+.footer-menu-item:hover:before {
+  width: 100%;
 }
 
 /* Animations */
