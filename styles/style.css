@@ -955,6 +955,9 @@ footer {
 .footer-content {
   width: inherit;
 }
+.upper-part {
+  flex-flow: row wrap;
+}
 .footer-logo-contaienr {
   display: inline-block;
   width: 100%;
@@ -963,6 +966,10 @@ footer {
 .copy-right {
   border-top: 1px solid rgba(255, 255, 255, 0.404);
   font-size: 1em;
+}
+.footer-menu-item > a {
+  color: inherit;
+  font-size: 1.1em;
 }
 
 /* Hover styles */
