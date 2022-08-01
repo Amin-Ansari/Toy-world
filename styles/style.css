@@ -498,11 +498,19 @@ body {
   transition: all 0.3s;
 }
 .basket-cards {
-  height: 280px;
+  height: 300px;
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
   transform: scale(0);
+}
+.empy-basket::after {
+  content: "سبد خرید شما خالی میباشد";
+  font-weight: normal;
+  text-align: center;
+  display: block;
+  height: 230px;
+  line-height: 230px;
 }
 .card-section {
   width: 100%;
