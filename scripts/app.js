@@ -128,6 +128,7 @@ function resetAllTypes() {
 }
 function showAndHideProducts(givvenId) {
   let allTheproducts = document.querySelectorAll(".toy-list>li");
+  showAllProducts(allTheproducts);
   if (givvenId != "all") {
     for (let element of allTheproducts) {
       if (!element.classList.contains(`${givvenId}`))
@@ -135,6 +136,11 @@ function showAndHideProducts(givvenId) {
           element.classList.add("dis-none");
     }
   } else {
-    for (let element of allTheproducts) element.classList.remove("dis-none");
+    showAllProducts(allTheproducts);
+  }
+}
+function showAllProducts(products) {
+  for (let prod of products) {
+    prod.classList.remove("dis-none");
   }
 }
