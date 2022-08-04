@@ -1,7 +1,7 @@
 let submenuButton = document.querySelector(".sub-menu-button");
 let basketButton = document.querySelector(".shop-basket");
 let categoryItems = document.querySelectorAll(".category-list>li");
-let categoryListItem = document.querySelectorAll(".category-list-items");
+let categoryListItem = document.querySelectorAll(".toy-list > li");
 let scrollButton = document.querySelector(".scroll-donw-link");
 let videoDiv = document.querySelector(".video-part");
 let playButton = document.querySelector(".play-icon");
