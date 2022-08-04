@@ -29,7 +29,9 @@ document.addEventListener("scroll", () => {
   for (let element of categoryListItem) {
     sectionScale(element);
   }
-  sectionScale(videoDiv);
+  if (videoDiv) {
+    sectionScale(videoDiv);
+  }
   sectionScale(subscribeSection);
   for (let element of instagrampost) {
     sectionScale(element);
