@@ -37,11 +37,15 @@ document.addEventListener("scroll", () => {
     sectionScale(element);
   }
 });
-scrollButton.addEventListener("click", function () {
-  document.documentElement.scrollTop =
-    document.documentElement.clientHeight * 0.5;
-});
-playButton.addEventListener("click", playVideo);
+if (scrollButton) {
+  scrollButton.addEventListener("click", function () {
+    document.documentElement.scrollTop =
+      document.documentElement.clientHeight * 0.5;
+  });
+}
+if (playButton) {
+  playButton.addEventListener("click", playVideo);
+}
 emailInput.addEventListener("blur", inputValidation);
 
 function showSubMenu() {

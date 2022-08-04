@@ -737,6 +737,9 @@ body {
 .toy-list {
   flex-flow: row wrap;
 }
+.toy-list > li {
+  transition: all 0.3s;
+}
 .category-list-items {
   background-color: #fff;
   display: block;
@@ -744,9 +747,9 @@ body {
   color: #303030;
   text-align: center;
   box-shadow: 0px 0px 8px -4px rgba(83, 83, 83, 0.329);
-  transition: all 0.3s;
   opacity: 0;
   transform: scale(0);
+  transition: all 0.3s;
 }
 .category-list-items > h4,
 .price {
@@ -1034,7 +1037,7 @@ footer {
   background-color: #ff5d5d;
 }
 .category-list-items:hover {
-  transform: scale(1.1);
+  transform: scale(1.05) !important;
   box-shadow: rgba(109, 109, 109, 0.336) 0px 5px 15px;
 }
 .video-container > i:hover {
