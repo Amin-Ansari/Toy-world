@@ -1010,6 +1010,15 @@ footer {
   transition: all 0.3s;
   overflow: hidden;
 }
+.address-container {
+  width: inherit;
+  border: 3px solid #e5e5e5;
+  border-radius: 30px;
+  color: #999999;
+}
+.address-container a {
+  color: inherit;
+}
 .toy-type {
   background: transparent;
   border: none;
@@ -1087,11 +1096,8 @@ input[type="button"]:hover {
 .toy-hover-state:hover {
   background: #e2e2e2;
 }
-.address-container {
-  width: inherit;
-  border: 3px solid #e5e5e5;
-  border-radius: 30px;
-  color: #999999;
+.address-container a:hover {
+  text-decoration: underline;
 }
 .catelog-products:hover {
   transform: scale(1.02);
