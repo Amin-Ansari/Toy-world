@@ -10,6 +10,7 @@ let video = document.querySelector(".video-container>video");
 let subscribeSection = document.querySelector(".subscribe-part");
 let emailInput = document.querySelector(".email-in");
 let instagrampost = document.querySelectorAll(".image-list li");
+let typeButtons = document.querySelectorAll(".toy-type");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -47,6 +48,9 @@ if (playButton) {
   playButton.addEventListener("click", playVideo);
 }
 emailInput.addEventListener("blur", inputValidation);
+typeButtons.forEach(function (item) {
+  item.addEventListener("click", changeTheType);
+});
 
 function showSubMenu() {
   barsTransform();
@@ -108,5 +112,29 @@ function inputValidation() {
     console.log(this.value.length);
     this.classList.remove("unvalidEmail");
     this.nextElementSibling.classList.remove("show-state");
+  }
+}
+function changeTheType() {
+  let title = document.querySelector(".toy-type-title");
+  resetAllTypes();
+  this.classList.replace("toy-hover-state", "selected-type");
+  title.innerHTML = this.innerHTML;
+  showAndHideProducts(this.id);
+}
+function resetAllTypes() {
+  for (let element of typeButtons) {
+    element.classList.replace("selected-type", "toy-hover-state");
+  }
+}
+function showAndHideProducts(givvenId) {
+  let allTheproducts = document.querySelectorAll(".toy-list>li");
+  if (givvenId != "all") {
+    for (let element of allTheproducts) {
+      if (!element.classList.contains(`${givvenId}`))
+        if (!element.classList.contains("dis-none"))
+          element.classList.add("dis-none");
+    }
+  } else {
+    for (let element of allTheproducts) element.classList.remove("dis-none");
   }
 }
