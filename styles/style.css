@@ -1010,6 +1010,22 @@ footer {
   transition: all 0.3s;
   overflow: hidden;
 }
+.toy-type {
+  background: transparent;
+  border: none;
+  font-size: 1.1em;
+  display: block;
+  border-radius: 35px;
+  color: #303030;
+  transition: all 0.3s;
+}
+.selected-type {
+  background-color: #ff5d5d;
+  color: #fff;
+}
+.category-buttons {
+  flex-flow: row wrap;
+}
 
 /* Hover styles */
 .icons:hover {
@@ -1037,7 +1053,7 @@ footer {
   background-color: #ff5d5d;
 }
 .category-list-items:hover {
-  transform: scale(1.05) !important;
+  transform: scale(1.02) !important;
   box-shadow: rgba(109, 109, 109, 0.336) 0px 5px 15px;
 }
 .video-container > i:hover {
@@ -1059,6 +1075,9 @@ input[type="button"]:hover {
 }
 .footer-menu-item:hover:before {
   width: 100%;
+}
+.toy-hover-state:hover {
+  background: #e2e2e2;
 }
 
 /* Animations */

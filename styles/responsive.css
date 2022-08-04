@@ -63,6 +63,23 @@
     text-align: center;
     flex-flow: column wrap;
   }
+  .section-title > h3.toy-type-title {
+    display: none;
+  }
+  .section-title {
+    justify-content: center;
+  }
+  .section-title {
+    width: 100%;
+  }
+  .category-buttons {
+    width: 100%;
+  }
+  .toy-type {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
@@ -117,6 +134,23 @@
     text-align: center;
     flex-flow: column wrap;
   }
+  .section-title > h3.toy-type-title {
+    display: none;
+  }
+  .section-title {
+    justify-content: center;
+  }
+  .section-title {
+    width: 100%;
+  }
+  .category-buttons {
+    width: 100%;
+  }
+  .toy-type {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 @media all and (min-width: 768px) {
   .md-width-col-1 {
@@ -170,6 +204,23 @@
   .sub-description {
     text-align: center;
     flex-flow: column wrap;
+  }
+  .section-title > h3.toy-type-title {
+    display: none;
+  }
+  .section-title {
+    justify-content: center;
+  }
+  .section-title {
+    width: auto;
+  }
+  .category-buttons {
+    width: 100%;
+  }
+  .toy-type {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
 @media all and (min-width: 992px) {
@@ -227,6 +278,20 @@
   .sub-description {
     text-align: right;
     flex-flow: row wrap;
+  }
+  .section-title > h3.toy-type-title {
+    display: block;
+  }
+  .section-title {
+    justify-content: space-between;
+  }
+  .category-buttons {
+    width: auto;
+  }
+  .toy-type {
+    width: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 @media all and (min-width: 1200px) {
