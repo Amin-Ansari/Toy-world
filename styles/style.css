@@ -1026,7 +1026,15 @@ footer {
 .category-buttons {
   flex-flow: row wrap;
 }
-
+.catelog-products {
+  background-color: #fff;
+  display: block;
+  border-radius: 10px;
+  color: #303030;
+  text-align: center;
+  box-shadow: 0px 0px 8px -4px rgba(83, 83, 83, 0.329);
+  transition: all 0.3s;
+}
 /* Hover styles */
 .icons:hover {
   background-color: rgba(0, 0, 0, 0.26);
@@ -1084,6 +1092,10 @@ input[type="button"]:hover {
   border: 3px solid #e5e5e5;
   border-radius: 30px;
   color: #999999;
+}
+.catelog-products:hover {
+  transform: scale(1.02);
+  box-shadow: rgba(109, 109, 109, 0.336) 0px 5px 15px;
 }
 
 /* Animations */
