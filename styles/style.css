@@ -1079,6 +1079,12 @@ input[type="button"]:hover {
 .toy-hover-state:hover {
   background: #e2e2e2;
 }
+.address-container {
+  width: inherit;
+  border: 3px solid #e5e5e5;
+  border-radius: 30px;
+  color: #999999;
+}
 
 /* Animations */
 
