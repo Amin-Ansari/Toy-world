@@ -711,7 +711,7 @@ body {
   bottom: -28px;
   right: 0px;
   width: 70%;
-  height: 3px;
+  height: 2px;
   border-radius: 15px;
   background-color: #ff5d5d;
 }
@@ -1059,7 +1059,7 @@ footer {
   color: #303030;
 }
 .delivery-info-container h2 {
-  font-size: 2.5em;
+  font-size: 2.3em;
   padding-top: 15px;
   padding-bottom: 15px;
   font-family: "Iran-sans-bold";
@@ -1096,6 +1096,51 @@ footer {
 }
 .lego-image {
   border-radius: 18px;
+}
+.activity-history {
+  width: inherit;
+  flex-flow: row wrap-reverse;
+}
+.activity-history > div {
+  order: 0;
+}
+.activity-history > h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.3em;
+  color: #303030;
+  order: 1;
+}
+.activity-history h3 {
+  font-size: 2.3em;
+  color: #303030;
+  position: relative;
+}
+.activity-history h3::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 3px;
+  width: 20%;
+  background: #ff5d5d;
+}
+.activity-history p {
+  font-size: 1.3em;
+  color: #303030;
+  position: relative;
+}
+.go-to-catalog {
+  width: 130px;
+  display: inline-block;
+  text-align: center;
+  background-color: #ff5d5d;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.5em;
+  transition: all 0.3s;
+}
+.activity-history img {
+  border-radius: 15px;
 }
 
 /* Hover styles */
@@ -1180,6 +1225,11 @@ input[type="button"]:hover {
 .introduction-section > a:hover {
   border-color: #ff5d5d;
 }
+.go-to-catalog:hover {
+  transform: scale(1.05);
+  box-shadow: #ff5d5d 0px 25px 20px -17px;
+}
+
 /* Animations */
 
 @keyframes sumShow {

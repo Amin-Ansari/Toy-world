@@ -80,6 +80,12 @@
     padding-top: 8px;
     padding-bottom: 8px;
   }
+  .quality-part {
+    text-align: center;
+  }
+  .activity-history p {
+    padding-left: 0px;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
@@ -150,6 +156,12 @@
     width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
+  }
+  .quality-part {
+    text-align: center;
+  }
+  .activity-history p {
+    padding-left: 0px;
   }
 }
 @media all and (min-width: 768px) {
@@ -222,6 +234,12 @@
     padding-top: 8px;
     padding-bottom: 8px;
   }
+  .quality-part {
+    text-align: center;
+  }
+  .activity-history p {
+    padding-left: 0px;
+  }
 }
 @media all and (min-width: 992px) {
   .lg-width-col-1 {
@@ -292,6 +310,12 @@
     width: auto;
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+  .quality-part {
+    text-align: right;
+  }
+  .activity-history p {
+    padding-left: 60px;
   }
 }
 @media all and (min-width: 1200px) {
