@@ -1176,6 +1176,10 @@ footer {
   color: #303030;
   position: relative;
 }
+.last-about-section {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
 
 /* Hover styles */
 .icons:hover {
