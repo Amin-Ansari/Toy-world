@@ -1086,6 +1086,17 @@ footer {
   border-radius: 20px;
   transition: all 0.3s;
 }
+.introduction-section > a {
+  color: #303030;
+  font-size: 1.2em;
+  border-bottom: 3px solid #999;
+  display: inline-block;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+.lego-image {
+  border-radius: 18px;
+}
 
 /* Hover styles */
 .icons:hover {
@@ -1150,7 +1161,25 @@ input[type="button"]:hover {
   transform: scale(1.05);
   box-shadow: #ff5d5d 0px 25px 20px -17px;
 }
-
+.introduction-section {
+  width: inherit;
+  flex-flow: column wrap;
+}
+.introduction-section > h2 {
+  font-size: 2.5em;
+  color: #303030;
+}
+.introduction-section > p {
+  width: 100%;
+  max-width: 570px;
+  line-height: 24px;
+  font-size: 1.2em;
+  color: #999;
+  text-align: center;
+}
+.introduction-section > a:hover {
+  border-color: #ff5d5d;
+}
 /* Animations */
 
 @keyframes sumShow {
