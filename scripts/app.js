@@ -11,6 +11,7 @@ let subscribeSection = document.querySelector(".subscribe-part");
 let emailInput = document.querySelector(".email-in");
 let instagrampost = document.querySelectorAll(".image-list li");
 let typeButtons = document.querySelectorAll(".toy-type");
+let boysimage = document.querySelector(".boy-image");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -37,6 +38,7 @@ document.addEventListener("scroll", () => {
   for (let element of instagrampost) {
     sectionScale(element);
   }
+  sectionScale(boysimage);
 });
 if (scrollButton) {
   scrollButton.addEventListener("click", function () {
