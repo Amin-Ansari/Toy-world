@@ -1205,13 +1205,15 @@ footer {
   border: 2px solid #e5e5e5;
   font-size: 1.1em;
   background-color: #f8f8f8;
+  outline: none;
 }
 .contact-form > textarea {
   width: 100%;
   border-radius: 25px;
   border: 2px solid #e5e5e5;
-  font-size: 1.1em;
+  font-size: 1.2em;
   background-color: #f8f8f8;
+  outline: none;
 }
 input[type="submit"] {
   background-color: #ff5d5d;
@@ -1224,6 +1226,40 @@ input[type="submit"] {
 .contact-title {
   font-size: 2.2em;
   color: #303030;
+}
+.contact-info > p {
+  font-size: 1.4em;
+  color: #303030;
+}
+.mini-title {
+  font-size: 1.5em;
+  color: #303030;
+}
+.contact-icon-list {
+  font-size: 1.2em;
+}
+.contact-icon-list li {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s;
+}
+.contact-icon-list li:nth-child(1) {
+  background: #fc0d1c;
+}
+.contact-icon-list li:nth-child(2) {
+  background: #bd081c;
+}
+.contact-icon-list li:nth-child(3) {
+  background: #fb416b;
+}
+.contact-icon-list li:nth-child(4) {
+  background: #3b5998;
+}
+.contact-icon-list li:nth-child(5) {
+  background: #2aa3f0;
 }
 
 /* Hover styles */
@@ -1303,6 +1339,9 @@ input[type="button"]:hover {
 input[type="submit"]:hover {
   transform: scale(1.05);
   box-shadow: #ff5d5d 0px 25px 20px -17px;
+}
+.contact-icon-list li:hover {
+  transform: scale(1.06);
 }
 
 /* Animations */
