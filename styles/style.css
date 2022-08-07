@@ -1224,8 +1224,9 @@ input[type="submit"] {
   transition: all 0.3s;
 }
 .contact-title {
-  font-size: 2.2em;
+  font-size: 2.3em;
   color: #303030;
+  font-weight: normal;
 }
 .contact-info > p {
   font-size: 1.4em;
