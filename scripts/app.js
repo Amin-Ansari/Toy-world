@@ -12,6 +12,7 @@ let emailInput = document.querySelector(".email-in");
 let instagrampost = document.querySelectorAll(".image-list li");
 let typeButtons = document.querySelectorAll(".toy-type");
 let aboutImages = document.querySelectorAll(".boy-image");
+let relatedProducts = document.querySelectorAll(".related-produtects");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -39,6 +40,9 @@ document.addEventListener("scroll", () => {
     sectionScale(element);
   }
   for (let element of aboutImages) {
+    sectionScale(element);
+  }
+  for (let element of relatedProducts) {
     sectionScale(element);
   }
 });

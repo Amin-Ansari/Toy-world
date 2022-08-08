@@ -1355,6 +1355,11 @@ input[type="submit"] {
   border-radius: 15px;
   background-color: #ff5d5d;
 }
+.relatedProducts {
+  transition: all 0.3s;
+  opacity: 0;
+  transform: scale(0);
+}
 
 /* Hover styles */
 .icons:hover {
