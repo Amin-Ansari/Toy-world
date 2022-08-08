@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caterpillar</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="/images/logo.png" />
+  </head>
+  <body>
+    <header class="container-fluid header-container">
+      <div class="container-fluid dis-flex main-axis-centered nav-social">
+        <div class="container social-container padd-right-left-15 dis-flex">
+          <ul class="social-list icons-list padd-top-bottom-3">
+            <li class="icon-items">
+              <a
+                class="icons dis-flex cross-axis-center"
+                href="javascript:void(0)"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+            <li class="icon-items">
+              <a class="icons" href="javascript:void(0)"
+                ><i class="fa-brands fa-pinterest"></i
+              ></a>
+            </li>
+            <li class="icon-items">
+              <a class="icons" href="javascript:void(0)"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li class="icon-items">
+              <a class="icons" href="javascript:void(0)"
+                ><i class="fa-brands fa-facebook-square"></i
+              ></a>
+            </li>
+            <li class="icon-items">
+              <a class="icons" href="javascript:void(0)"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+            <li></li>
+          </ul>
+          <ul class="social-list contanct-list dis-flex">
+            <li class="padd-top-bottom-3 contact-ietms phone-num">
+              تماس:09123456789
+            </li>
+            <li
+              class="padd-right-left-10 padd-top-bottom-3 contact-ietms email-address"
+            >
+              ایمیل:
+              <a href="javascript:void(0)">info@email.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="container-fluid dis-flex main-axis-centered navigation">
+        <div class="container navigation-container padd-right-left-15 dis-flex">
+          <div class="dis-flex main-axis-centered cross-axis-center">
+            <a class="logo-link dis-flex" href="/index.htm">
+              <img src="/images/logo.png" alt="Logo on the website" />
+            </a>
+            <ul class="menu dis-flex">
+              <li>
+                <a
+                  class="menu-links padd-right-left-15 padd-top-bottom-20"
+                  href="catalog.htm"
+                  >کاتالوگ</a
+                >
+              </li>
+              <li>
+                <a
+                  class="menu-links padd-right-left-15 padd-top-bottom-20"
+                  href="delivery.htm"
+                  >ارسال محصولات</a
+                >
+              </li>
+              <li>
+                <a
+                  class="menu-links padd-right-left-15 padd-top-bottom-20"
+                  href="about.htm"
+                  >درباره ما</a
+                >
+              </li>
+              <li>
+                <a
+                  class="menu-links padd-right-left-15 padd-top-bottom-20"
+                  href="contact.htm"
+                  >تماس با ما</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="dis-flex cross-axis-center">
+            <button class="sub-menu-button margin-right-left-10">
+              <div class="bars"></div>
+              <div class="bars"></div>
+              <div class="bars"></div>
+            </button>
+            <button class="shop-basket" type="button">
+              <img src="/images/basket.png" alt="basket image" />
+              <span class="bsket-length">0</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="mobile-menu container">
+        <ul>
+          <li class="padd-top-bottom-18 padd-right-left-15 sub-item">
+            <a class="sub-link" href="catalog.htm">کاتالوگ</a>
+          </li>
+          <li class="padd-top-bottom-18 padd-right-left-15 sub-item">
+            <a class="sub-link" href="delivery.htm">ارسال محصولات</a>
+          </li>
+          <li class="padd-top-bottom-18 padd-right-left-15 sub-item">
+            <a class="sub-link" href="about.htm">درباره ما</a>
+          </li>
+          <li class="padd-top-bottom-18 padd-right-left-15 sub-item">
+            <a class="sub-link" href="contact.htm">تماس با ما</a>
+          </li>
+        </ul>
+      </div>
+      <div class="basket-stored container-fluid">
+        <div
+          class="basket-cards xs-width-col-11 sm-width-col-10 md-width-col-8 lg-width-col-5 xl-width-col-5 xxl-width-col-5 empy-basket"
+        >
+          <div
+            class="card-section dis-flex padd-top-bottom-18 padd-right-left-18"
+          >
+            <h6>سبد خرید شما</h6>
+            <i class="fa-solid fa-xmark basket-close-btn dis-flex"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section
+      class="container-fluid dis-flex main-axis-centered padd-right-left-15 padd-top-bottom-35"
+    >
+      <div
+        class="container address-container padd-right-left-15 padd-top-bottom-8"
+      >
+        <p>
+          <a href="../index.htm">صفحه اصلی</a>
+          <i class="fa-solid fa-arrow-left-long margin-right-left-8"></i>
+          <a href="caterpillar.htm">هزارپای چوبی</a>
+        </p>
+      </div>
+    </section>
+    <section
+      class="container-fluid dis-flex main-axis-centered padd-right-left-15"
+    >
+      <div
+        class="container toy-description padd-right-left-40 padd-top-bottom-40"
+      >
+        <div class="product-order dis-flex">
+          <div
+            class="product-buy-dec xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-6 xl-width-col-6 xxl-width-col-6"
+          >
+            <h3 class="product-name padd-top-bottom-10 padd-right-left-8">
+              هزارپای چوبی
+            </h3>
+            <p class="product-desc padd-top-bottom-10">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد، تا با نرم افزارها شنا
+            </p>
+            <p class="product-price padd-right-left-8 padd-top-bottom-10">
+              <span class="price-num">30000</span> تومان
+            </p>
+            <form
+              class="buy-form dis-flex padd-top-bottom-10"
+              action="javascript:void(0)"
+              method="post"
+            >
+              <button
+                class="xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-4 xl-width-col-4 xxl-width-col-4 margin-right-left-8 margin-top-bottom-3 padd-top-bottom-8 product-add-card"
+                type="button"
+              >
+                افزودن به سبد خرید
+              </button>
+              <input
+                class="xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-2 xl-width-col-2 xxl-width-col-2 margin-right-left-8 margin-top-bottom-5 product-num padd-right-left-8 padd-top-bottom-3"
+                type="number"
+                name="number-of-toy"
+                id=""
+                min="1"
+                max="20"
+                value="1"
+              />
+            </form>
+          </div>
+          <div
+            <div
+            class="product-iamge-container xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-6 xl-width-col-6 xxl-width-col-6 padd-right-left-5 padd-top-bottom-5"
+          >
+            <img
+              class="full-width-image"
+              src="../images/Caterpillar.png"
+              alt="picture of the product"
+            />
+          </div>
+        </div>
+        <div class="pro-title padd-top-bottom-25 dis-flex">
+          <h3>مشخصات محصول</h3>
+        </div>
+        <ul class="description-list margin-top-bottom-30 padd-right-left-20">
+          <li class="padd-top-bottom-10 desc-item">
+            <span>عرض</span>
+            <span class="bolder-span">60 سانتی متر</span>
+          </li>
+          <li class="padd-top-bottom-10 desc-item">
+            <span>ارتفاع</span> <span class="bolder-span">110 سانتی متر</span>
+          </li>
+          <li class="padd-top-bottom-10 desc-item">
+            <span>قطر</span> <span class="bolder-span">25 سانتی متر</span>
+          </li>
+          <li class="padd-top-bottom-10 desc-item">
+            <span>وزن</span> <span class="bolder-span">54 گرم</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="container-fluid dis-flex main-axis-centered">
+      <div class="container toy-container padd-right-left-15">
+        <div class="pro-title padd-top-bottom-25 dis-flex">
+          <h3>محصولات مرتبط</h3>
+        </div>
+        <ul class="toy-list margin-top-bottom-50 dis-flex">
+          <li
+            class="xs-width-col-12 sm-width-col-6 md-width-col-6 lg-width-col-3 xl-width-col-3 xxl-width-col-3 padd-right-left-15 padd-top-bottom-15 catalog-product stuffed"
+          >
+            <a
+              href="#"
+              class="catelog-products padd-right-left-10 padd-top-bottom-20"
+            >
+              <img
+                class="full-width-image"
+                src="/images/bear.png"
+                alt="bear toy"
+              />
+              <h4 class="toy-name padd-top-bottom-5">عروسک خرسی</h4>
+              <p class="price">28000 تومان</p>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-12 sm-width-col-6 md-width-col-6 lg-width-col-3 xl-width-col-3 xxl-width-col-3 padd-right-left-15 padd-top-bottom-15 catalog-product wooden"
+          >
+            <a
+              href="#"
+              class="catelog-products padd-right-left-10 padd-top-bottom-20"
+            >
+              <img
+                class="full-width-image"
+                src="/images/flower.png"
+                alt="happy flower toy"
+              />
+              <h4 class="toy-name padd-top-bottom-5">گل خوشحال</h4>
+              <p class="price">28000 تومان</p>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-12 sm-width-col-6 md-width-col-6 lg-width-col-3 xl-width-col-3 xxl-width-col-3 padd-right-left-15 padd-top-bottom-15 catalog-product wooden"
+          >
+            <a
+              href="#"
+              class="catelog-products padd-right-left-10 padd-top-bottom-20"
+            >
+              <img
+                class="full-width-image"
+                src="/images/Rainbow Truck.png"
+                alt="Green truck toy"
+              />
+              <h4 class="toy-name padd-top-bottom-5">کامیون سبز</h4>
+              <p class="price">34000 تومان</p>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-12 sm-width-col-6 md-width-col-6 lg-width-col-3 xl-width-col-3 xxl-width-col-3 padd-right-left-15 padd-top-bottom-15 catalog-product wooden"
+          >
+            <a
+              href="#"
+              class="catelog-products padd-right-left-10 padd-top-bottom-20"
+            >
+              <img
+                class="full-width-image"
+                src="/images/truck.png"
+                alt="wooden truck"
+              />
+              <h4 class="toy-name padd-top-bottom-5">جرثقیل چوبی</h4>
+              <p class="price">35000 تومان</p>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-12 sm-width-col-6 md-width-col-6 lg-width-col-3 xl-width-col-3 xxl-width-col-3 padd-right-left-15 padd-top-bottom-15 catalog-product stuffed"
+          >
+            <a
+              href="#"
+              class="catelog-products padd-right-left-10 padd-top-bottom-20"
+            >
+              <img
+                class="full-width-image"
+                src="/images/Christmas deer.png"
+                alt="Christmas deer dull"
+              />
+              <h4 class="toy-name padd-top-bottom-5">گوزن کریسمس</h4>
+              <p class="price">32000 تومان</p>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-12 sm-width-col-6 md-width-col-6 lg-width-col-3 xl-width-col-3 xxl-width-col-3 padd-right-left-15 padd-top-bottom-15 catalog-product stuffed"
+          >
+            <a
+              href="#"
+              class="catelog-products padd-right-left-10 padd-top-bottom-20"
+            >
+              <img
+                class="full-width-image"
+                src="/images/Yellow dog.png"
+                alt="pluto dog dull"
+              />
+              <h4 class="toy-name padd-top-bottom-5">عروسگ پلوتو</h4>
+              <p class="price">40000 تومان</p>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-12 sm-width-col-6 md-width-col-6 lg-width-col-3 xl-width-col-3 xxl-width-col-3 padd-right-left-15 padd-top-bottom-15 catalog-product wooden"
+          >
+            <a
+              href="#"
+              class="catelog-products padd-right-left-10 padd-top-bottom-20"
+            >
+              <img
+                class="full-width-image"
+                src="/images/Happy dog.png"
+                alt="Happy dog dull"
+              />
+              <h4 class="toy-name padd-top-bottom-5">سگ چوبی</h4>
+              <p class="price">37000 تومان</p>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-12 sm-width-col-6 md-width-col-6 lg-width-col-3 xl-width-col-3 xxl-width-col-3 padd-right-left-15 padd-top-bottom-15 catalog-product wooden"
+          >
+            <a
+              href="#"
+              class="catelog-products padd-right-left-10 padd-top-bottom-20"
+            >
+              <img
+                class="full-width-image"
+                src="/images/Caterpillar.png"
+                alt="Caterpillar toy"
+              />
+              <h4 class="toy-name padd-top-bottom-5">هزارپای چوبی</h4>
+              <p class="price">30000 تومان</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section
+      class="container-fluid subscribe-section dis-flex main-axis-centered padd-top-bottom-70 padd-right-left-15"
+    >
+      <div
+        class="container subscribe-part dis-flex padd-right-left-20 padd-top-bottom-20"
+      >
+        <div
+          class="xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-6 xl-width-col-6 xxl-width-col-6 sub-description padd-top-bottom-35 dis-flex"
+        >
+          <i class="fa-brands fa-telegram padd-right-left-10"></i>
+          <p class="padd-right-left-10">
+            با <span>عضویت</span> از جدیدترین اخبار ما مطلع شوید
+          </p>
+        </div>
+        <div
+          class="xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-6 xl-width-col-6 xxl-width-col-6 sub-form dis-flex"
+        >
+          <form
+            class="padd-top-bottom-30 dis-flex"
+            action="javascript:void(0)"
+            method="post"
+          >
+            <div
+              class="xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-8 xl-width-col-8 xxl-width-col-8 padd-right-left-5"
+            >
+              <input
+                class="padd-right-left-10 email-in"
+                type="email"
+                name="email-input"
+                id="email-sub"
+                placeholder="  ایمیل خود را وارد نمایید"
+              />
+              <p class="email-input-state padd-top-bottom-5">
+                فرمت وارد شده صحیح نمیباشد
+              </p>
+            </div>
+            <div
+              class="xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-2 xl-width-col-2 xxl-width-col-2 padd-right-left-5"
+            >
+              <input type="button" value="عضویت" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid dis-flex main-axis-centered">
+      <div
+        class="container instagram-info padd-right-left-15 padd-top-bottom-50"
+      >
+        <h4 class="instagram-follow padd-top-bottom-35">
+          مارا در اینستاگرام دنبال کنید
+        </h4>
+        <ul class="image-list dis-flex padd-top-bottom-50">
+          <li
+            class="xs-width-col-4 sm-width-col-4 md-width-col-4 lg-width-col-2 xl-width-col-2 xxl-width-col-2 padd-right-left-5 padd-top-bottom-3"
+          >
+            <a class="post-content dis-flex" href="https://www.instagram.com/">
+              <img
+                class="full-width-image"
+                src="/images/monkey.jpg"
+                alt="monkey toy"
+              />
+              <div
+                class="hover-side dis-flex main-axis-centered cross-axis-center"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-4 sm-width-col-4 md-width-col-4 lg-width-col-2 xl-width-col-2 xxl-width-col-2 padd-right-left-5 padd-top-bottom-3"
+          >
+            <a class="post-content dis-flex" href="https://www.instagram.com/">
+              <img
+                class="full-width-image"
+                src="/images/image-basket.jpg"
+                alt="star basket"
+              />
+              <div
+                class="hover-side dis-flex main-axis-centered cross-axis-center"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-4 sm-width-col-4 md-width-col-4 lg-width-col-2 xl-width-col-2 xxl-width-col-2 padd-right-left-5 padd-top-bottom-3"
+          >
+            <a class="post-content dis-flex" href="https://www.instagram.com/">
+              <img
+                class="full-width-image"
+                src="/images/cloud and dull.jpg"
+                alt="cloud and dull"
+              />
+              <div
+                class="hover-side dis-flex main-axis-centered cross-axis-center"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-4 sm-width-col-4 md-width-col-4 lg-width-col-2 xl-width-col-2 xxl-width-col-2 padd-right-left-5 padd-top-bottom-3"
+          >
+            <a class="post-content dis-flex" href="https://www.instagram.com/">
+              <img
+                class="full-width-image"
+                src="/images/kid hand.jpg"
+                alt="image of kid's hand"
+              />
+              <div
+                class="hover-side dis-flex main-axis-centered cross-axis-center"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-4 sm-width-col-4 md-width-col-4 lg-width-col-2 xl-width-col-2 xxl-width-col-2 padd-right-left-5 padd-top-bottom-3"
+          >
+            <a class="post-content dis-flex" href="https://www.instagram.com/">
+              <img
+                class="full-width-image"
+                src="/images/flower toy.jpg"
+                alt="flower iamge"
+              />
+              <div
+                class="hover-side dis-flex main-axis-centered cross-axis-center"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </li>
+          <li
+            class="xs-width-col-4 sm-width-col-4 md-width-col-4 lg-width-col-2 xl-width-col-2 xxl-width-col-2 padd-right-left-5 padd-top-bottom-3"
+          >
+            <a class="post-content dis-flex" href="https://www.instagram.com/">
+              <img
+                class="full-width-image"
+                src="/images/bear toy.jpg"
+                alt="iamge of the bear"
+              />
+              <div
+                class="hover-side dis-flex main-axis-centered cross-axis-center"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <a
+          class="more-post padd-right-left-15 padd-top-bottom-5 margin-top-bottom-40"
+          href="https://www.instagram.com/"
+        >
+          مشاهده بیشتر
+        </a>
+      </div>
+    </section>
+    <footer class="container-fluid dis-flex main-axis-centered">
+      <div
+        class="container footer-content padd-right-left-15 padd-top-bottom-10"
+      >
+        <div class="upper-part dis-flex main-axis-centered padd-top-bottom-25">
+          <div
+            class="footer-logo-contaienr xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-2 xl-width-col-2 xxl-width-col-2"
+          >
+            <a href="/index.htm">
+              <img src="/images/footer_logo.png" alt="ToyWorld logo" />
+            </a>
+          </div>
+          <ul
+            class="footer-menu xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-8 xl-width-col-8 xxl-width-col-8 padd-top-bottom-8 dis-flex cross-axis-center main-axis-centered"
+          >
+            <li class="padd-right-left-10 footer-menu-item">
+              <a href="catalog.htm">کاتالوگ</a>
+            </li>
+            <li class="padd-right-left-10 footer-menu-item">
+              <a href="catalog.htm">ارسال محصولات</a>
+            </li>
+            <li class="padd-right-left-10 footer-menu-item">
+              <a href="about.htm">درباره ما</a>
+            </li>
+            <li class="padd-right-left-10 footer-menu-item">
+              <a href="contact.htm">تماس با ما</a>
+            </li>
+          </ul>
+          <ul
+            class="social-media-icons xs-width-col-12 sm-width-col-12 md-width-col-12 lg-width-col-2 xl-width-col-2 xxl-width-col-2 padd-top-bottom-8 dis-flex main-axis-centered cross-axis-center"
+          >
+            <li class="footer-social margin-right-left-5">
+              <a class="icons" href="javascript:void(0)"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+            <li class="footer-social margin-right-left-5">
+              <a class="icons" href="javascript:void(0)"
+                ><i class="fa-brands fa-pinterest"></i
+              ></a>
+            </li>
+            <li class="footer-social margin-right-left-5">
+              <a class="icons" href="javascript:void(0)"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li class="footer-social margin-right-left-5">
+              <a class="icons" href="javascript:void(0)"
+                ><i class="fa-brands fa-facebook-square"></i
+              ></a>
+            </li>
+            <li class="footer-social margin-right-left-5">
+              <a class="icons" href="javascript:void(0)"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <p class="copy-right padd-top-bottom-25">
+          تمامی حقوق این وبسایت محفوظ میبشد.
+        </p>
+      </div>
+    </footer>
+    <script src="../scripts/app.js"></script>
+  </body>
+</html>
