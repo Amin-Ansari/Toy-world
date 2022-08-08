@@ -1262,6 +1262,15 @@ input[type="submit"] {
 .contact-icon-list li:nth-child(5) {
   background: #2aa3f0;
 }
+.toy-description {
+  width: inherit;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px -4px rgba(80, 80, 80, 0.445);
+}
+.product-order {
+  flex-flow: row wrap-reverse;
+}
 
 /* Hover styles */
 .icons:hover {
