@@ -1296,6 +1296,7 @@ input[type="submit"] {
   color: #fff;
   font-size: 1.3em;
   border-radius: 40px;
+  transition: all 0.3s;
 }
 .product-num {
   border: none;
@@ -1429,6 +1430,10 @@ input[type="submit"]:hover {
 }
 .contact-icon-list li:hover {
   transform: scale(1.06);
+}
+.product-add-card:hover {
+  transform: scale(1.05);
+  box-shadow: #ff5d5d 0px 25px 20px -20px;
 }
 
 /* Animations */
