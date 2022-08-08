@@ -1325,6 +1325,29 @@ input[type="submit"] {
   font-family: "Iran-sans-bold";
   font-size: 0.9em;
 }
+.pro-title {
+  border-bottom: 3px solid #e5e5e5;
+  flex-flow: nowrap wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.pro-title > h3 {
+  font-size: 1.9em;
+  font-family: "B-yekan";
+  font-weight: normal;
+  position: relative;
+}
+.pro-title > h3::before {
+  content: "";
+  position: absolute;
+  bottom: -27px;
+  right: 0px;
+  width: 70%;
+  height: 2px;
+  border-radius: 15px;
+  background-color: #ff5d5d;
+}
 
 /* Hover styles */
 .icons:hover {
