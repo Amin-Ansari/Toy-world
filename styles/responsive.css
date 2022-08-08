@@ -110,6 +110,9 @@
     padding-right: 8px;
     padding-left: 8px;
   }
+  .more-toys {
+    display: none;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
@@ -210,6 +213,9 @@
   .product-desc {
     padding-right: 8px;
     padding-left: 8px;
+  }
+  .more-toys {
+    display: none;
   }
 }
 @media all and (min-width: 768px) {
@@ -312,6 +318,9 @@
     padding-right: 8px;
     padding-left: 8px;
   }
+  .more-toys {
+    display: none;
+  }
 }
 @media all and (min-width: 992px) {
   .lg-width-col-1 {
@@ -412,6 +421,9 @@
   .product-desc {
     padding-right: 0px;
     padding-left: 80px;
+  }
+  .more-toys {
+    display: block;
   }
 }
 @media all and (min-width: 1200px) {
