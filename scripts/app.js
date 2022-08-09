@@ -13,11 +13,11 @@ let instagrampost = document.querySelectorAll(".image-list li");
 let typeButtons = document.querySelectorAll(".toy-type");
 let aboutImages = document.querySelectorAll(".boy-image");
 let relatedProducts = document.querySelectorAll(".related-produtects");
+let moveButtons = document.querySelectorAll(".move-slide");
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
 document.addEventListener("click", puaseVideo);
-
 document.addEventListener("click", function (eventOb) {
   if (eventOb.target.classList.contains("basket-stored")) {
     showBasket();
@@ -58,6 +58,9 @@ if (playButton) {
 emailInput.addEventListener("blur", inputValidation);
 typeButtons.forEach(function (item) {
   item.addEventListener("click", changeTheType);
+});
+moveButtons.forEach(function (item) {
+  item.addEventListener("click", moveSlider);
 });
 
 function showSubMenu() {
@@ -150,5 +153,78 @@ function showAndHideProducts(givvenId) {
 function showAllProducts(products) {
   for (let prod of products) {
     prod.classList.remove("dis-none");
+  }
+}
+let valuOfTranslate = 0;
+function moveSlider() {
+  let theContainer = this.parentElement.firstElementChild.nextElementSibling;
+  let containerChildrenns = theContainer.children;
+  let translateValue = getComputedStyle(containerChildrenns[0]).width;
+  translateValue = Number(translateValue.split("px")[0]);
+  if (this.classList.contains("forward")) {
+    if (window.innerWidth < 576) {
+      valuOfTranslate += translateValue;
+      if (valuOfTranslate <= translateValue * 6) {
+        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
+        moveButtons[0].classList.replace("opa-0", "opa-1");
+        moveButtons[1].classList.replace("opa-0", "opa-1");
+        if (valuOfTranslate == translateValue * 6) {
+          moveButtons[1].classList.replace("opa-1", "opa-0");
+        }
+      }
+    } else if (window.innerWidth >= 576 && window.innerWidth <= 991) {
+      valuOfTranslate += translateValue;
+      if (valuOfTranslate <= translateValue * 5) {
+        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
+        moveButtons[0].classList.replace("opa-0", "opa-1");
+        moveButtons[1].classList.replace("opa-0", "opa-1");
+        if (valuOfTranslate == translateValue * 5) {
+          moveButtons[1].classList.replace("opa-1", "opa-0");
+        }
+      }
+    } else if (window.innerWidth >= 992) {
+      valuOfTranslate += translateValue;
+      if (valuOfTranslate <= translateValue * 3) {
+        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
+        moveButtons[0].classList.replace("opa-0", "opa-1");
+        moveButtons[1].classList.replace("opa-0", "opa-1");
+        if (valuOfTranslate == translateValue * 3) {
+          moveButtons[1].classList.replace("opa-1", "opa-0");
+        }
+      }
+    }
+  } else {
+    if (window.innerWidth < 576) {
+      valuOfTranslate -= translateValue;
+      console.log(valuOfTranslate);
+      if (valuOfTranslate >= 0) {
+        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
+        moveButtons[0].classList.replace("opa-0", "opa-1");
+        moveButtons[1].classList.replace("opa-0", "opa-1");
+        if (valuOfTranslate == 0) {
+          moveButtons[0].classList.replace("opa-1", "opa-0");
+        }
+      }
+    } else if (window.innerWidth >= 576 && window.innerWidth <= 991) {
+      valuOfTranslate -= translateValue;
+      if (valuOfTranslate >= 0) {
+        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
+        moveButtons[0].classList.replace("opa-0", "opa-1");
+        moveButtons[1].classList.replace("opa-0", "opa-1");
+        if (valuOfTranslate == 0) {
+          moveButtons[0].classList.replace("opa-1", "opa-0");
+        }
+      }
+    } else if (window.innerWidth >= 992) {
+      valuOfTranslate -= translateValue;
+      if (valuOfTranslate >= 0) {
+        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
+        moveButtons[0].classList.replace("opa-0", "opa-1");
+        moveButtons[1].classList.replace("opa-0", "opa-1");
+        if (valuOfTranslate == 0) {
+          moveButtons[0].classList.replace("opa-1", "opa-0");
+        }
+      }
+    }
   }
 }
