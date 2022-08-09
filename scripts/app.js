@@ -13,7 +13,7 @@ let instagrampost = document.querySelectorAll(".image-list li");
 let typeButtons = document.querySelectorAll(".toy-type");
 let aboutImages = document.querySelectorAll(".boy-image");
 let relatedProducts = document.querySelectorAll(".related-produtects");
-let moveButtons = document.querySelectorAll(".move-slide");
+let moveButtons = document.querySelectorAll(`.move-slide`);
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -159,70 +159,90 @@ let valuOfTranslate = 0;
 function moveSlider() {
   let theContainer = this.parentElement.firstElementChild.nextElementSibling;
   let containerChildrenns = theContainer.children;
+  let moves = document.querySelectorAll(
+    `#${theContainer.parentElement.id} > span`
+  );
   let translateValue = getComputedStyle(containerChildrenns[0]).width;
   translateValue = Number(translateValue.split("px")[0]);
   if (this.classList.contains("forward")) {
     if (window.innerWidth < 576) {
       valuOfTranslate += translateValue;
-      if (valuOfTranslate <= translateValue * 6) {
+      if (
+        valuOfTranslate <=
+        translateValue * (containerChildrenns.length - 1)
+      ) {
         theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moveButtons[0].classList.replace("opa-0", "opa-1");
-        moveButtons[1].classList.replace("opa-0", "opa-1");
-        if (valuOfTranslate == translateValue * 6) {
-          moveButtons[1].classList.replace("opa-1", "opa-0");
+        moves[0].classList.replace("opa-0", "opa-1");
+        moves[1].classList.replace("opa-0", "opa-1");
+        if (
+          valuOfTranslate ==
+          translateValue * (containerChildrenns.length - 1)
+        ) {
+          moves[1].classList.replace("opa-1", "opa-0");
         }
       }
     } else if (window.innerWidth >= 576 && window.innerWidth <= 991) {
       valuOfTranslate += translateValue;
-      if (valuOfTranslate <= translateValue * 5) {
+      if (
+        valuOfTranslate <=
+        translateValue * (containerChildrenns.length - 2)
+      ) {
         theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moveButtons[0].classList.replace("opa-0", "opa-1");
-        moveButtons[1].classList.replace("opa-0", "opa-1");
-        if (valuOfTranslate == translateValue * 5) {
-          moveButtons[1].classList.replace("opa-1", "opa-0");
+        moves[0].classList.replace("opa-0", "opa-1");
+        moves[1].classList.replace("opa-0", "opa-1");
+        if (
+          valuOfTranslate ==
+          translateValue * (containerChildrenns.length - 2)
+        ) {
+          moves[1].classList.replace("opa-1", "opa-0");
         }
       }
     } else if (window.innerWidth >= 992) {
       valuOfTranslate += translateValue;
-      if (valuOfTranslate <= translateValue * 3) {
+      if (
+        valuOfTranslate <=
+        translateValue * (containerChildrenns.length - 4)
+      ) {
         theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moveButtons[0].classList.replace("opa-0", "opa-1");
-        moveButtons[1].classList.replace("opa-0", "opa-1");
-        if (valuOfTranslate == translateValue * 3) {
-          moveButtons[1].classList.replace("opa-1", "opa-0");
+        moves[0].classList.replace("opa-0", "opa-1");
+        moves[1].classList.replace("opa-0", "opa-1");
+        if (
+          valuOfTranslate ==
+          translateValue * (containerChildrenns.length - 4)
+        ) {
+          moves[1].classList.replace("opa-1", "opa-0");
         }
       }
     }
   } else {
     if (window.innerWidth < 576) {
       valuOfTranslate -= translateValue;
-      console.log(valuOfTranslate);
       if (valuOfTranslate >= 0) {
         theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moveButtons[0].classList.replace("opa-0", "opa-1");
-        moveButtons[1].classList.replace("opa-0", "opa-1");
+        moves[0].classList.replace("opa-0", "opa-1");
+        moves[1].classList.replace("opa-0", "opa-1");
         if (valuOfTranslate == 0) {
-          moveButtons[0].classList.replace("opa-1", "opa-0");
+          moves[0].classList.replace("opa-1", "opa-0");
         }
       }
     } else if (window.innerWidth >= 576 && window.innerWidth <= 991) {
       valuOfTranslate -= translateValue;
       if (valuOfTranslate >= 0) {
         theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moveButtons[0].classList.replace("opa-0", "opa-1");
-        moveButtons[1].classList.replace("opa-0", "opa-1");
+        moves[0].classList.replace("opa-0", "opa-1");
+        moves[1].classList.replace("opa-0", "opa-1");
         if (valuOfTranslate == 0) {
-          moveButtons[0].classList.replace("opa-1", "opa-0");
+          moves[0].classList.replace("opa-1", "opa-0");
         }
       }
     } else if (window.innerWidth >= 992) {
       valuOfTranslate -= translateValue;
       if (valuOfTranslate >= 0) {
         theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moveButtons[0].classList.replace("opa-0", "opa-1");
-        moveButtons[1].classList.replace("opa-0", "opa-1");
+        moves[0].classList.replace("opa-0", "opa-1");
+        moves[1].classList.replace("opa-0", "opa-1");
         if (valuOfTranslate == 0) {
-          moveButtons[0].classList.replace("opa-1", "opa-0");
+          moves[0].classList.replace("opa-1", "opa-0");
         }
       }
     }
