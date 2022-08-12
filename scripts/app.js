@@ -171,8 +171,7 @@ function moveSlider() {
           this.classList.replace("opa-1", "opa-0");
         }
       }
-    }
-    if (window.innerWidth >= 567 && window.innerWidth <= 768) {
+    } else if (window.innerWidth >= 567 && window.innerWidth < 992) {
       if (ulRight >= -theLIftValue * (theULChildNumber - 3)) {
         showAllTheMoveButtons(theUl);
         theUl.style.right = `${ulRight - theLIftValue}px`;
@@ -180,8 +179,7 @@ function moveSlider() {
           this.classList.replace("opa-1", "opa-0");
         }
       }
-    }
-    if (window.innerWidth >= 768) {
+    } else if (window.innerWidth >= 992) {
       if (ulRight >= -theLIftValue * (theULChildNumber - 5)) {
         showAllTheMoveButtons(theUl);
         theUl.style.right = `${ulRight - theLIftValue}px`;
