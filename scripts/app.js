@@ -235,7 +235,7 @@ function interfeerOrNot(ulRight, liftRight) {
     return true;
   }
 }
-// Every one millisecond checks if result of right value of UL element divided to width of li element of the ul is not equal to zero, it sets the right value of ul to zero
+// Every one millisecond checks if result of right value of UL element divided to width of li element of the ul is not equal to zero, it sets the right value of ul to zero and hides the back buttons
 setInterval(function () {
   let theUlRight = document.querySelectorAll(".slide-list");
   for (let element of theUlRight) {
@@ -243,6 +243,10 @@ setInterval(function () {
     if (rightVal != 0) {
       let liftVal = returnProp(element.firstElementChild, "width");
       if (!interfeerOrNot(rightVal, liftVal)) {
+        let buttons = document.querySelectorAll(
+          `#${element.parentElement.id} > span`
+        );
+        buttons[0].classList.replace("opa-1", "opa-0");
         element.style.right = `0px`;
       }
     }
