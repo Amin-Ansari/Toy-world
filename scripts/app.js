@@ -228,3 +228,23 @@ function showAllTheMoveButtons(UlElement) {
     element.classList.replace("opa-0", "opa-1");
   }
 }
+function interfeerOrNot(ulRight, liftRight) {
+  if (ulRight % liftRight != 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
+// Every one millisecond checks if result of right value of UL element divided to width of li element of the ul is not equal to zero, it sets the right value of ul to zero
+setInterval(function () {
+  let theUlRight = document.querySelectorAll(".slide-list");
+  for (let element of theUlRight) {
+    let rightVal = returnProp(element, "width");
+    if (rightVal != 0) {
+      let liftVal = returnProp(element.firstElementChild, "width");
+      if (!interfeerOrNot(rightVal, liftVal)) {
+        element.style.right = `0px`;
+      }
+    }
+  }
+}, 1);
