@@ -189,6 +189,31 @@ function moveSlider() {
       }
     }
   } else {
+    if (window.innerWidth < 567) {
+      if (ulRight < 0) {
+        showAllTheMoveButtons(theUl);
+        theUl.style.right = `${ulRight + theLIftValue}px`;
+        if (ulRight == -theLIftValue) {
+          this.classList.replace("opa-1", "opa-0");
+        }
+      }
+    } else if (window.innerWidth >= 567 && window.innerWidth < 992) {
+      if (ulRight < 0) {
+        showAllTheMoveButtons(theUl);
+        theUl.style.right = `${ulRight + theLIftValue}px`;
+        if (ulRight == -theLIftValue) {
+          this.classList.replace("opa-1", "opa-0");
+        }
+      }
+    } else if (window.innerWidth >= 992) {
+      if (ulRight < 0) {
+        showAllTheMoveButtons(theUl);
+        theUl.style.right = `${ulRight + theLIftValue}px`;
+        if (ulRight == -theLIftValue) {
+          this.classList.replace("opa-1", "opa-0");
+        }
+      }
+    }
   }
 }
 function returnProp(theObject, propValue) {
