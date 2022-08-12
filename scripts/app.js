@@ -155,96 +155,13 @@ function showAllProducts(products) {
     prod.classList.remove("dis-none");
   }
 }
-let valuOfTranslate = 0;
 function moveSlider() {
-  let theContainer = this.parentElement.firstElementChild.nextElementSibling;
-  let containerChildrenns = theContainer.children;
-  let moves = document.querySelectorAll(
-    `#${theContainer.parentElement.id} > span`
-  );
-  let translateValue = getComputedStyle(containerChildrenns[0]).width;
-  translateValue = Number(translateValue.split("px")[0]);
-  if (this.classList.contains("forward")) {
-    if (window.innerWidth < 576) {
-      valuOfTranslate += translateValue;
-      if (
-        valuOfTranslate <=
-        translateValue * (containerChildrenns.length - 1)
-      ) {
-        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moves[0].classList.replace("opa-0", "opa-1");
-        moves[1].classList.replace("opa-0", "opa-1");
-        if (
-          valuOfTranslate ==
-          translateValue * (containerChildrenns.length - 1)
-        ) {
-          moves[1].classList.replace("opa-1", "opa-0");
-        }
-      }
-    } else if (window.innerWidth >= 576 && window.innerWidth <= 991) {
-      valuOfTranslate += translateValue;
-      if (
-        valuOfTranslate <=
-        translateValue * (containerChildrenns.length - 2)
-      ) {
-        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moves[0].classList.replace("opa-0", "opa-1");
-        moves[1].classList.replace("opa-0", "opa-1");
-        if (
-          valuOfTranslate ==
-          translateValue * (containerChildrenns.length - 2)
-        ) {
-          moves[1].classList.replace("opa-1", "opa-0");
-        }
-      }
-    } else if (window.innerWidth >= 992) {
-      valuOfTranslate += translateValue;
-      if (
-        valuOfTranslate <=
-        translateValue * (containerChildrenns.length - 4)
-      ) {
-        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moves[0].classList.replace("opa-0", "opa-1");
-        moves[1].classList.replace("opa-0", "opa-1");
-        if (
-          valuOfTranslate ==
-          translateValue * (containerChildrenns.length - 4)
-        ) {
-          moves[1].classList.replace("opa-1", "opa-0");
-        }
-      }
-    }
-  } else {
-    if (window.innerWidth < 576) {
-      valuOfTranslate -= translateValue;
-      if (valuOfTranslate >= 0) {
-        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moves[0].classList.replace("opa-0", "opa-1");
-        moves[1].classList.replace("opa-0", "opa-1");
-        if (valuOfTranslate == 0) {
-          moves[0].classList.replace("opa-1", "opa-0");
-        }
-      }
-    } else if (window.innerWidth >= 576 && window.innerWidth <= 991) {
-      valuOfTranslate -= translateValue;
-      if (valuOfTranslate >= 0) {
-        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moves[0].classList.replace("opa-0", "opa-1");
-        moves[1].classList.replace("opa-0", "opa-1");
-        if (valuOfTranslate == 0) {
-          moves[0].classList.replace("opa-1", "opa-0");
-        }
-      }
-    } else if (window.innerWidth >= 992) {
-      valuOfTranslate -= translateValue;
-      if (valuOfTranslate >= 0) {
-        theContainer.style = `transform:translateX(${valuOfTranslate}px)`;
-        moves[0].classList.replace("opa-0", "opa-1");
-        moves[1].classList.replace("opa-0", "opa-1");
-        if (valuOfTranslate == 0) {
-          moves[0].classList.replace("opa-1", "opa-0");
-        }
-      }
-    }
-  }
+  let theUl = this.parentElement.firstElementChild.nextElementSibling;
+  let theLIftValue = theUl.firstElementChild;
+  theLIftValue = returnWidth(theLIftValue);
+}
+function returnWidth(theObject) {
+  let theValue = getComputedStyle(theObject).width;
+  theValue = theValue.split("px");
+  return Number(theValue[0]);
 }

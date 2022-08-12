@@ -752,6 +752,9 @@ body {
 .slide-list {
   flex-flow: row nowrap;
   transition: all 0.3s;
+  position: relative;
+  top: 0px;
+  right: 0px;
 }
 .slide-list > li {
   transition: all 0.3s;
