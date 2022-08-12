@@ -786,8 +786,18 @@ body {
 .backward {
   right: 0px;
 }
+.backward::before {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+}
 .forward {
   left: 0px;
+}
+.forward::before {
+  content: "\f104";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
 }
 .opa-0 {
   opacity: 0;

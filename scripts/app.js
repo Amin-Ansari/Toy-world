@@ -157,12 +157,51 @@ function showAllProducts(products) {
 }
 function moveSlider() {
   let theUl = this.parentElement.firstElementChild.nextElementSibling;
+  let theULChildNumber = theUl.children;
   let theLIftValue = theUl.firstElementChild;
+  theULChildNumber = theULChildNumber.length;
   theLIftValue = returnProp(theLIftValue, "width");
   let ulRight = returnProp(theUl, "right");
+  if (this.classList.contains("forward")) {
+    if (window.innerWidth < 567) {
+      if (ulRight >= -theLIftValue * (theULChildNumber - 2)) {
+        showAllTheMoveButtons(theUl);
+        theUl.style.right = `${ulRight - theLIftValue}px`;
+        if (ulRight == -theLIftValue * (theULChildNumber - 2)) {
+          this.classList.replace("opa-1", "opa-0");
+        }
+      }
+    }
+    if (window.innerWidth >= 567 && window.innerWidth <= 768) {
+      if (ulRight >= -theLIftValue * (theULChildNumber - 3)) {
+        showAllTheMoveButtons(theUl);
+        theUl.style.right = `${ulRight - theLIftValue}px`;
+        if (ulRight == -theLIftValue * (theULChildNumber - 3)) {
+          this.classList.replace("opa-1", "opa-0");
+        }
+      }
+    }
+    if (window.innerWidth >= 768) {
+      if (ulRight >= -theLIftValue * (theULChildNumber - 5)) {
+        showAllTheMoveButtons(theUl);
+        theUl.style.right = `${ulRight - theLIftValue}px`;
+        if (ulRight == -theLIftValue * (theULChildNumber - 5)) {
+          this.classList.replace("opa-1", "opa-0");
+        }
+      }
+    }
+  } else {
+  }
 }
 function returnProp(theObject, propValue) {
   let theValue = getComputedStyle(theObject)[`${propValue}`];
   theValue = theValue.split("px");
   return Number(theValue[0]);
+}
+function showAllTheMoveButtons(UlElement) {
+  let neededId = UlElement.parentElement.id;
+  let buttons = document.querySelectorAll(`#${neededId} > span`);
+  for (let element of buttons) {
+    element.classList.replace("opa-0", "opa-1");
+  }
 }
