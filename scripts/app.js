@@ -158,10 +158,11 @@ function showAllProducts(products) {
 function moveSlider() {
   let theUl = this.parentElement.firstElementChild.nextElementSibling;
   let theLIftValue = theUl.firstElementChild;
-  theLIftValue = returnWidth(theLIftValue);
+  theLIftValue = returnProp(theLIftValue, "width");
+  let ulRight = returnProp(theUl, "right");
 }
-function returnWidth(theObject) {
-  let theValue = getComputedStyle(theObject).width;
+function returnProp(theObject, propValue) {
+  let theValue = getComputedStyle(theObject)[`${propValue}`];
   theValue = theValue.split("px");
   return Number(theValue[0]);
 }
