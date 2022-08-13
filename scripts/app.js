@@ -323,8 +323,183 @@ function basketLength() {
 }
 function filltheBasket() {
   let theBasketContainer = document.querySelector(".basket-cards");
-  if (localStorage.length > 0) {
-    // theBasketContainer.firstElementChild.nextElementSibling.innerHTML = "";
+  theBasketContainer.firstElementChild.nextElementSibling.innerHTML = "";
+  if (!localStorage.length) {
+    theBasketContainer.firstElementChild.nextElementSibling.appendChild(
+      emptyParagraph()
+    );
+    theBasketContainer.lastElementChild.classList.add("dis-none");
+  } else {
   }
 }
+function emptyParagraph() {
+  let paragraph = document.createElement("p");
+  paragraph.classList.add("empty-basket");
+  paragraph.innerHTML = "سبد خرید شما خالی است";
+  return paragraph;
+}
 filltheBasket();
+
+/*
+            <ul class="basket-list">
+              <li class="basket-item">
+                <div class="right">
+                  <div class="basket-img-container">
+                    <img
+                      class="full-width-image"
+                      src="images/bear.png"
+                      alt="product image"
+                    />
+                  </div>
+                  <div class="basket-item-info">
+                    <h3>خرس خوشحال</h3>
+                    <p><span class="item-price">30000</span>تومان</p>
+                    <button type="button">حذف محصول</button>
+                  </div>
+                </div>
+                <div class="left">
+                  <form
+                    class="number-form"
+                    action="javascript:void(0)"
+                    method="post"
+                  >
+                    <input
+                      type="number"
+                      name="number-input"
+                      id=""
+                      min="1"
+                      value="1"
+                      class="item-num"
+                    />
+                  </form>
+                </div>
+              </li>
+              <li class="basket-item">
+                <div class="right">
+                  <div class="basket-img-container">
+                    <img
+                      class="full-width-image"
+                      src="images/bear.png"
+                      alt="product image"
+                    />
+                  </div>
+                  <div class="basket-item-info">
+                    <h3>خرس خوشحال</h3>
+                    <p><span class="item-price">30000</span>تومان</p>
+                    <button type="button">حذف محصول</button>
+                  </div>
+                </div>
+                <div class="left">
+                  <form
+                    class="number-form"
+                    action="javascript:void(0)"
+                    method="post"
+                  >
+                    <input
+                      type="number"
+                      name="number-input"
+                      id=""
+                      min="1"
+                      value="1"
+                      class="item-num"
+                    />
+                  </form>
+                </div>
+              </li>
+              <li class="basket-item">
+                <div class="right">
+                  <div class="basket-img-container">
+                    <img
+                      class="full-width-image"
+                      src="images/bear.png"
+                      alt="product image"
+                    />
+                  </div>
+                  <div class="basket-item-info">
+                    <h3>خرس خوشحال</h3>
+                    <p><span class="item-price">30000</span>تومان</p>
+                    <button type="button">حذف محصول</button>
+                  </div>
+                </div>
+                <div class="left">
+                  <form
+                    class="number-form"
+                    action="javascript:void(0)"
+                    method="post"
+                  >
+                    <input
+                      type="number"
+                      name="number-input"
+                      id=""
+                      min="1"
+                      value="1"
+                      class="item-num"
+                    />
+                  </form>
+                </div>
+              </li>
+              <li class="basket-item">
+                <div class="right">
+                  <div class="basket-img-container">
+                    <img
+                      class="full-width-image"
+                      src="images/bear.png"
+                      alt="product image"
+                    />
+                  </div>
+                  <div class="basket-item-info">
+                    <h3>خرس خوشحال</h3>
+                    <p><span class="item-price">30000</span>تومان</p>
+                    <button type="button">حذف محصول</button>
+                  </div>
+                </div>
+                <div class="left">
+                  <form
+                    class="number-form"
+                    action="javascript:void(0)"
+                    method="post"
+                  >
+                    <input
+                      type="number"
+                      name="number-input"
+                      id=""
+                      min="1"
+                      value="1"
+                      class="item-num"
+                    />
+                  </form>
+                </div>
+              </li>
+              <li class="basket-item">
+                <div class="right">
+                  <div class="basket-img-container">
+                    <img
+                      class="full-width-image"
+                      src="images/bear.png"
+                      alt="product image"
+                    />
+                  </div>
+                  <div class="basket-item-info">
+                    <h3>خرس خوشحال</h3>
+                    <p><span class="item-price">30000</span>تومان</p>
+                    <button type="button">حذف محصول</button>
+                  </div>
+                </div>
+                <div class="left">
+                  <form
+                    class="number-form"
+                    action="javascript:void(0)"
+                    method="post"
+                  >
+                    <input
+                      type="number"
+                      name="number-input"
+                      id=""
+                      min="1"
+                      value="1"
+                      class="item-num"
+                    />
+                  </form>
+                </div>
+              </li>
+            </ul>*/
