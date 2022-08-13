@@ -302,7 +302,6 @@ function addToLocalStorage() {
       }
     }
     addToLocal();
-    console.log(2);
   } else {
     addToLocal();
   }
@@ -460,5 +459,6 @@ document.addEventListener("click", function (eventOb) {
       );
     }
     filltheBasket();
+    basketLength();
   }
 });
