@@ -356,6 +356,16 @@ function filltheBasket() {
         product.productprice;
       item.lastElementChild.firstElementChild.firstElementChild.value =
         product.productNumber;
+      item.lastElementChild.firstElementChild.firstElementChild.addEventListener(
+        "click",
+        function () {
+          let productItem = JSON.parse(localStorage.getItem(`product${i}`));
+          productItem.productNumber = Number(this.value);
+          localStorage.setItem(`product${i}`, JSON.stringify(productItem));
+          basketLength();
+          calculateTheSum();
+        }
+      );
       theBasketContainer.firstElementChild.nextElementSibling.firstElementChild.appendChild(
         item
       );
@@ -416,7 +426,6 @@ function calculateTheSum() {
     let theProduct = JSON.parse(localStorage.getItem(`product${i}`));
     totalPrice +=
       Number(theProduct.productNumber) * Number(theProduct.productprice);
-    console.log(theTotalPrice);
   }
   theTotalPrice.firstElementChild.innerHTML = totalPrice;
 }
