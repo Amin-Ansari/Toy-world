@@ -14,6 +14,8 @@ let typeButtons = document.querySelectorAll(".toy-type");
 let aboutImages = document.querySelectorAll(".boy-image");
 let relatedProducts = document.querySelectorAll(".related-produtects");
 let moveButtons = document.querySelectorAll(`.move-slide`);
+let addButtons = document.querySelectorAll(".product-add-card");
+let productInfo = {};
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
@@ -61,6 +63,9 @@ typeButtons.forEach(function (item) {
 });
 moveButtons.forEach(function (item) {
   item.addEventListener("click", moveSlider);
+});
+addButtons.forEach(function (item) {
+  item.addEventListener("click", addTocard);
 });
 
 function showSubMenu() {
@@ -252,3 +257,31 @@ setInterval(function () {
     }
   }
 }, 1);
+
+function addTocard() {
+  productInfo["productName"] =
+    this.parentElement.parentElement.firstElementChild.innerText;
+  productInfo["ProductNumber"] = Number(this.nextElementSibling.value);
+  productInfo["Productprice"] = Number(
+    this.parentElement.previousElementSibling.firstElementChild.innerText
+  );
+  addToLocalStorage();
+}
+function addToLocalStorage() {
+  if (localStorage.length > 0) {
+    for (let i = 1; i <= localStorage.length; i++) {
+      let itemCompare = JSON.parse(localStorage.getItem(`product${i}`));
+      if (productInfo.productName == itemCompare.productName) {
+        itemCompare.ProductNumber += Number(productInfo.ProductNumber);
+        localStorage.setItem(`product${i}`, JSON.stringify(itemCompare));
+      }
+      console.log("if");
+    }
+  } else {
+    localStorage.setItem(
+      `product${localStorage.length + 1}`,
+      JSON.stringify(productInfo)
+    );
+    console.log("else");
+  }
+}
