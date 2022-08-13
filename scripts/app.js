@@ -19,6 +19,9 @@ let productInfo = {};
 
 submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
+window.addEventListener("load", function () {
+  basketLength();
+});
 document.addEventListener("click", puaseVideo);
 document.addEventListener("click", function (eventOb) {
   if (eventOb.target.classList.contains("basket-stored")) {
@@ -257,16 +260,22 @@ setInterval(function () {
     }
   }
 }, 1);
-// setInterval(, 10);
 
 function addTocard() {
   productInfo["productName"] =
     this.parentElement.parentElement.firstElementChild.innerText;
   let theNumberInput = this.nextElementSibling;
-  productInfo["ProductNumber"] = Number(theNumberInput.value);
-  productInfo["Productprice"] = Number(
+  productInfo["productNumber"] = Number(theNumberInput.value);
+  productInfo["productprice"] = Number(
     this.parentElement.previousElementSibling.firstElementChild.innerText
   );
+  let imageSource =
+    this.parentElement.parentElement.nextElementSibling.firstElementChild.src;
+  productInfo["productImage"] = imageSource.substring(
+    imageSource.indexOf("images/"),
+    imageSource.length
+  );
+  console.log(productInfo);
   addToLocalStorage();
   basketLength();
   theNumberInput.value = 1;
@@ -281,8 +290,8 @@ function addToLocalStorage() {
     }
     for (let j = 1; j <= localStorage.length; j++) {
       if (productInfo.productName == itemCompare[`product${j}`].productName) {
-        itemCompare[`product${j}`].ProductNumber += Number(
-          productInfo.ProductNumber
+        itemCompare[`product${j}`].productNumber += Number(
+          productInfo.productNumber
         );
         localStorage.setItem(
           `product${j}`,
@@ -308,8 +317,7 @@ function basketLength() {
   let theLengthNumber = 0;
   for (let i = 1; i <= localStorage.length; i++) {
     let theItem = JSON.parse(localStorage.getItem(`product${i}`));
-    theLengthNumber += Number(theItem.ProductNumber);
+    theLengthNumber += Number(theItem.productNumber);
   }
   theBasketLength.innerHTML = theLengthNumber;
 }
-basketLength();
