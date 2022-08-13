@@ -276,7 +276,6 @@ function addTocard() {
     imageSource.indexOf("images/"),
     imageSource.length
   );
-  console.log(productInfo);
   addToLocalStorage();
   basketLength();
   theNumberInput.value = 1;
@@ -359,11 +358,13 @@ function filltheBasket() {
       item.lastElementChild.firstElementChild.firstElementChild.addEventListener(
         "click",
         function () {
-          let productItem = JSON.parse(localStorage.getItem(`product${i}`));
-          productItem.productNumber = Number(this.value);
-          localStorage.setItem(`product${i}`, JSON.stringify(productItem));
-          basketLength();
-          calculateTheSum();
+          changeTheProductNumber(i, this);
+        }
+      );
+      item.lastElementChild.firstElementChild.firstElementChild.addEventListener(
+        "change",
+        function () {
+          changeTheProductNumber(i, this);
         }
       );
       theBasketContainer.firstElementChild.nextElementSibling.firstElementChild.appendChild(
@@ -372,6 +373,13 @@ function filltheBasket() {
       calculateTheSum();
     }
   }
+}
+function changeTheProductNumber(currentIndex, elem) {
+  let productItem = JSON.parse(localStorage.getItem(`product${currentIndex}`));
+  productItem.productNumber = Number(elem.value);
+  localStorage.setItem(`product${currentIndex}`, JSON.stringify(productItem));
+  basketLength();
+  calculateTheSum();
 }
 function emptyParagraph() {
   let paragraph = document.createElement("p");
