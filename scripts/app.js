@@ -52,6 +52,31 @@ document.addEventListener("scroll", () => {
     sectionScale(element);
   }
 });
+document.addEventListener("click", function (eventOb) {
+  if (eventOb.target.innerText == "حذف محصول") {
+    let theElement = eventOb.target.parentElement.parentElement.parentElement;
+    let theContainer =
+      eventOb.target.parentElement.parentElement.parentElement.parentElement
+        .children;
+    let theproductList = [];
+    for (let i = 0; i < theContainer.length; i++) {
+      if (theElement == theContainer[i]) {
+        theElement = i;
+      }
+      theproductList.push(JSON.parse(localStorage.getItem(`product${i + 1}`)));
+    }
+    theproductList.splice(theElement, 1);
+    localStorage.clear();
+    for (let i = 0; i < theproductList.length; i++) {
+      localStorage.setItem(
+        `product${i + 1}`,
+        JSON.stringify(theproductList[i])
+      );
+    }
+    filltheBasket();
+    basketLength();
+  }
+});
 if (scrollButton) {
   scrollButton.addEventListener("click", function () {
     document.documentElement.scrollTop =
@@ -434,27 +459,3 @@ function calculateTheSum() {
   }
   theTotalPrice.firstElementChild.innerHTML = totalPrice;
 }
-document.addEventListener("click", function (eventOb) {
-  if (eventOb.target.innerText == "حذف محصول") {
-    let theElement = eventOb.target.parentElement.parentElement.parentElement;
-    let theContainer =
-      eventOb.target.parentElement.parentElement.parentElement.parentElement
-        .children;
-    let theproductList = [];
-    for (let i = 0; i < theContainer.length; i++) {
-      if (theElement == theContainer[i]) {
-        theElement = i;
-           theproductList.push(JSON.parse(localStorage.getItem(`product${i + 1}`)));
-    }
-    theproductList.splice(theElement, 1);
-    localStorage.clear();
-    for (let i = 0; i < theproductList.length; i++) {
-      localStorage.setItem(
-        `product${i + 1}`,
-        JSON.stringify(theproductList[i])
-      );
-    }
-    filltheBasket();
-    basketLength();
-  }
-});
