@@ -298,6 +298,7 @@ function addToLocalStorage() {
           `product${j}`,
           JSON.stringify(itemCompare[`product${j}`])
         );
+        filltheBasket();
         return;
       }
     }
@@ -312,6 +313,7 @@ function addToLocal() {
     `product${localStorage.length + 1}`,
     JSON.stringify(productInfo)
   );
+  filltheBasket();
 }
 function basketLength() {
   let theBasketLength = document.querySelector(".bsket-length");
@@ -339,7 +341,15 @@ function filltheBasket() {
       let product = JSON.parse(localStorage.getItem(`product${i}`));
       let item = addProductToBsket();
       item.firstElementChild.firstElementChild.firstElementChild.src =
-        product.productImage || `../${product.productImage}`;
+        product.productImage;
+      // The code below checks if the image did not loaded set the src of the img to the laternative value
+      item.firstElementChild.firstElementChild.firstElementChild.addEventListener(
+        "error",
+        function () {
+          this.src = `../${product.productImage}`;
+          this.error = null;
+        }
+      );
       item.firstElementChild.lastElementChild.firstElementChild.innerHTML =
         product.productName;
       item.firstElementChild.lastElementChild.firstElementChild.nextElementSibling.firstElementChild.innerHTML =
@@ -349,6 +359,7 @@ function filltheBasket() {
       theBasketContainer.firstElementChild.nextElementSibling.firstElementChild.appendChild(
         item
       );
+      calculateTheSum();
     }
   }
 }
@@ -398,4 +409,14 @@ function addProductToBsket() {
   item.className = "basket-item";
   return item;
 }
-filltheBasket();
+function calculateTheSum() {
+  let theTotalPrice = document.querySelector(".total-price");
+  let totalPrice = 0;
+  for (let i = 1; i <= localStorage.length; i++) {
+    let theProduct = JSON.parse(localStorage.getItem(`product${i}`));
+    totalPrice +=
+      Number(theProduct.productNumber) * Number(theProduct.productprice);
+    console.log(theTotalPrice);
+  }
+  theTotalPrice.firstElementChild.innerHTML = totalPrice;
+}
