@@ -321,3 +321,10 @@ function basketLength() {
   }
   theBasketLength.innerHTML = theLengthNumber;
 }
+function filltheBasket() {
+  let theBasketContainer = document.querySelector(".basket-cards");
+  if (localStorage.length > 0) {
+    // theBasketContainer.firstElementChild.nextElementSibling.innerHTML = "";
+  }
+}
+filltheBasket();

@@ -113,6 +113,15 @@
   .more-toys {
     display: none;
   }
+  .basket-cards {
+    height: 100%;
+  }
+  .basket-img-container {
+    width: 30%;
+  }
+  .basket-list {
+    height: 100%;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {

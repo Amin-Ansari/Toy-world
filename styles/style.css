@@ -448,7 +448,7 @@ body {
   background-color: transparent;
   cursor: pointer;
   position: relative;
-  z-index: 3;
+  z-index: 0;
 }
 .bsket-length {
   position: absolute;
@@ -489,8 +489,9 @@ body {
   transform: translate(0px, -1px) rotateZ(130deg);
 }
 .basket-stored {
-  height: 100vh;
-  position: absolute;
+  height: 100%;
+  width: 100%;
+  position: fixed;
   top: 0px;
   display: none;
   flex-flow: row wrap;
@@ -500,20 +501,130 @@ body {
   transition: all 0.3s;
 }
 .basket-cards {
-  height: 300px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: 100%;
   background-color: #fff;
   border-radius: 8px;
-  overflow: hidden;
   transform: scale(0);
+  overflow: auto;
 }
-.empy-basket::after {
-  content: "سبد خرید شما خالی میباشد";
+.content-basket {
+  height: 75%;
+  overflow: hidden;
+}
+.basket-list {
+  width: 100%;
+  border-bottom: 2px solid #e6e6e6;
+  padding: 16px 20px;
+  overflow: auto;
+}
+.basket-item {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 15px 0px;
+}
+.basket-item > div {
+  width: auto;
+  display: flex;
+}
+.basket-img-container {
+  width: 20%;
+  margin: 3px 0px;
+}
+.basket-item-info {
+  width: 50%;
+  padding: 0px 3px;
+  color: #303030;
+}
+.basket-item-info > h3 {
+  font-size: 1.1em;
+  font-family: "Iran-sans-bold";
+  font-weight: normal;
+  color: inherit;
+  width: 100%;
+  padding: 1px 0px;
+}
+.basket-item-info > p {
+  font-size: 1em;
+  font-weight: lighter;
+  color: inherit;
+  width: 100%;
+  padding: 1px 0px;
+}
+.item-price {
+  margin: 0px 2px;
+}
+.basket-item-info > button {
+  font-size: 1em;
+  border: none;
+  color: #ff5d5d;
+  text-decoration: underline !important;
+  background: transparent;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  text-align: right;
+  padding: 1px 0px;
+}
+.number-form {
+  width: 100%;
+  padding: 25px 0px;
+  text-align: left;
+}
+.item-num {
+  width: 75px;
+  font-size: 1.2em;
+  padding: 1px 7px;
+  text-align: center;
+  margin: 0px 1px;
+  border-radius: 60px;
+  border: none;
+  outline: 2px solid #e2e2e2;
+  background-color: #f8f8f8;
+}
+.sum-pay {
+  padding: 20px 20px;
+  height: auto;
+}
+.sum-price {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  color: #3f3f3f;
+  font-weight: lighter;
+}
+.total-price {
+  font-weight: normal;
+  font-family: "Iran-sans-bold";
+}
+.total-price > span {
+  font: inherit;
+}
+.pay-button {
+  width: 100%;
+  font-size: 2em;
+  border: none;
+  background: #ff5d5d;
+  color: #fff;
+  border-radius: 60px;
+  margin: 7px 0px;
+  transition: all 0.3s;
+}
+.pay-button:hover {
+  transform: scale(1.05);
+  box-shadow: #ff5d5d 0px 25px 20px -17px;
+}
+.empty-basket {
   font-weight: normal;
   text-align: center;
   display: block;
-  height: 230px;
-  line-height: 230px;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  padding: 100px 0px;
 }
 .card-section {
   width: 100%;
