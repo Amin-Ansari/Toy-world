@@ -126,10 +126,8 @@ function inputValidation() {
     if (!this.classList.contains("unvalidEmail")) {
       this.classList.add("unvalidEmail");
       this.nextElementSibling.classList.add("show-state");
-      console.log(this.value.length);
     }
   } else {
-    console.log(this.value.length);
     this.classList.remove("unvalidEmail");
     this.nextElementSibling.classList.remove("show-state");
   }
@@ -446,9 +444,7 @@ document.addEventListener("click", function (eventOb) {
     for (let i = 0; i < theContainer.length; i++) {
       if (theElement == theContainer[i]) {
         theElement = i;
-        console.log(theElement);
-      }
-      theproductList.push(JSON.parse(localStorage.getItem(`product${i + 1}`)));
+           theproductList.push(JSON.parse(localStorage.getItem(`product${i + 1}`)));
     }
     theproductList.splice(theElement, 1);
     localStorage.clear();
