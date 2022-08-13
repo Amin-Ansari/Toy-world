@@ -21,6 +21,7 @@ submenuButton.addEventListener("click", showSubMenu);
 basketButton.addEventListener("click", showBasket);
 window.addEventListener("load", function () {
   basketLength();
+  filltheBasket();
 });
 document.addEventListener("click", puaseVideo);
 document.addEventListener("click", function (eventOb) {
@@ -330,6 +331,25 @@ function filltheBasket() {
     );
     theBasketContainer.lastElementChild.classList.add("dis-none");
   } else {
+    theBasketContainer.lastElementChild.classList.remove("dis-none");
+    theBasketContainer.firstElementChild.nextElementSibling.appendChild(
+      ulCreateor()
+    );
+    for (let i = 1; i <= localStorage.length; i++) {
+      let product = JSON.parse(localStorage.getItem(`product${i}`));
+      let item = addProductToBsket();
+      item.firstElementChild.firstElementChild.firstElementChild.src =
+        product.productImage || `../${product.productImage}`;
+      item.firstElementChild.lastElementChild.firstElementChild.innerHTML =
+        product.productName;
+      item.firstElementChild.lastElementChild.firstElementChild.nextElementSibling.firstElementChild.innerHTML =
+        product.productprice;
+      item.lastElementChild.firstElementChild.firstElementChild.value =
+        product.productNumber;
+      theBasketContainer.firstElementChild.nextElementSibling.firstElementChild.appendChild(
+        item
+      );
+    }
   }
 }
 function emptyParagraph() {
@@ -338,168 +358,44 @@ function emptyParagraph() {
   paragraph.innerHTML = "سبد خرید شما خالی است";
   return paragraph;
 }
+function ulCreateor() {
+  let list = document.createElement("ul");
+  list.classList.add("basket-list");
+  return list;
+}
+function addProductToBsket() {
+  let item = document.createElement("li");
+  item.innerHTML = ` <div class="right">
+  <div class="basket-img-container">
+    <img
+      class="full-width-image"
+      src=""
+      alt="product image"
+    />
+  </div>
+  <div class="basket-item-info">
+    <h3></h3>
+    <p><span class="item-price"></span>تومان</p>
+    <button type="button">حذف محصول</button>
+  </div>
+</div>
+<div class="left">
+  <form
+    class="number-form"
+    action="javascript:void(0)"
+    method="post"
+  >
+    <input
+      type="number"
+      name="number-input"
+      id=""
+      min="1"
+      value=""
+      class="item-num"
+    />
+  </form>
+</div>`;
+  item.className = "basket-item";
+  return item;
+}
 filltheBasket();
-
-/*
-            <ul class="basket-list">
-              <li class="basket-item">
-                <div class="right">
-                  <div class="basket-img-container">
-                    <img
-                      class="full-width-image"
-                      src="images/bear.png"
-                      alt="product image"
-                    />
-                  </div>
-                  <div class="basket-item-info">
-                    <h3>خرس خوشحال</h3>
-                    <p><span class="item-price">30000</span>تومان</p>
-                    <button type="button">حذف محصول</button>
-                  </div>
-                </div>
-                <div class="left">
-                  <form
-                    class="number-form"
-                    action="javascript:void(0)"
-                    method="post"
-                  >
-                    <input
-                      type="number"
-                      name="number-input"
-                      id=""
-                      min="1"
-                      value="1"
-                      class="item-num"
-                    />
-                  </form>
-                </div>
-              </li>
-              <li class="basket-item">
-                <div class="right">
-                  <div class="basket-img-container">
-                    <img
-                      class="full-width-image"
-                      src="images/bear.png"
-                      alt="product image"
-                    />
-                  </div>
-                  <div class="basket-item-info">
-                    <h3>خرس خوشحال</h3>
-                    <p><span class="item-price">30000</span>تومان</p>
-                    <button type="button">حذف محصول</button>
-                  </div>
-                </div>
-                <div class="left">
-                  <form
-                    class="number-form"
-                    action="javascript:void(0)"
-                    method="post"
-                  >
-                    <input
-                      type="number"
-                      name="number-input"
-                      id=""
-                      min="1"
-                      value="1"
-                      class="item-num"
-                    />
-                  </form>
-                </div>
-              </li>
-              <li class="basket-item">
-                <div class="right">
-                  <div class="basket-img-container">
-                    <img
-                      class="full-width-image"
-                      src="images/bear.png"
-                      alt="product image"
-                    />
-                  </div>
-                  <div class="basket-item-info">
-                    <h3>خرس خوشحال</h3>
-                    <p><span class="item-price">30000</span>تومان</p>
-                    <button type="button">حذف محصول</button>
-                  </div>
-                </div>
-                <div class="left">
-                  <form
-                    class="number-form"
-                    action="javascript:void(0)"
-                    method="post"
-                  >
-                    <input
-                      type="number"
-                      name="number-input"
-                      id=""
-                      min="1"
-                      value="1"
-                      class="item-num"
-                    />
-                  </form>
-                </div>
-              </li>
-              <li class="basket-item">
-                <div class="right">
-                  <div class="basket-img-container">
-                    <img
-                      class="full-width-image"
-                      src="images/bear.png"
-                      alt="product image"
-                    />
-                  </div>
-                  <div class="basket-item-info">
-                    <h3>خرس خوشحال</h3>
-                    <p><span class="item-price">30000</span>تومان</p>
-                    <button type="button">حذف محصول</button>
-                  </div>
-                </div>
-                <div class="left">
-                  <form
-                    class="number-form"
-                    action="javascript:void(0)"
-                    method="post"
-                  >
-                    <input
-                      type="number"
-                      name="number-input"
-                      id=""
-                      min="1"
-                      value="1"
-                      class="item-num"
-                    />
-                  </form>
-                </div>
-              </li>
-              <li class="basket-item">
-                <div class="right">
-                  <div class="basket-img-container">
-                    <img
-                      class="full-width-image"
-                      src="images/bear.png"
-                      alt="product image"
-                    />
-                  </div>
-                  <div class="basket-item-info">
-                    <h3>خرس خوشحال</h3>
-                    <p><span class="item-price">30000</span>تومان</p>
-                    <button type="button">حذف محصول</button>
-                  </div>
-                </div>
-                <div class="left">
-                  <form
-                    class="number-form"
-                    action="javascript:void(0)"
-                    method="post"
-                  >
-                    <input
-                      type="number"
-                      name="number-input"
-                      id=""
-                      min="1"
-                      value="1"
-                      class="item-num"
-                    />
-                  </form>
-                </div>
-              </li>
-            </ul>*/
