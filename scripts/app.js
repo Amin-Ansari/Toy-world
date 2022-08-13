@@ -257,31 +257,59 @@ setInterval(function () {
     }
   }
 }, 1);
+// setInterval(, 10);
 
 function addTocard() {
   productInfo["productName"] =
     this.parentElement.parentElement.firstElementChild.innerText;
-  productInfo["ProductNumber"] = Number(this.nextElementSibling.value);
+  let theNumberInput = this.nextElementSibling;
+  productInfo["ProductNumber"] = Number(theNumberInput.value);
   productInfo["Productprice"] = Number(
     this.parentElement.previousElementSibling.firstElementChild.innerText
   );
   addToLocalStorage();
+  basketLength();
+  theNumberInput.value = 1;
 }
 function addToLocalStorage() {
+  let itemCompare = {};
   if (localStorage.length > 0) {
     for (let i = 1; i <= localStorage.length; i++) {
-      let itemCompare = JSON.parse(localStorage.getItem(`product${i}`));
-      if (productInfo.productName == itemCompare.productName) {
-        itemCompare.ProductNumber += Number(productInfo.ProductNumber);
-        localStorage.setItem(`product${i}`, JSON.stringify(itemCompare));
-      }
-      console.log("if");
+      itemCompare[`product${i}`] = JSON.parse(
+        localStorage.getItem(`product${i}`)
+      );
     }
+    for (let j = 1; j <= localStorage.length; j++) {
+      if (productInfo.productName == itemCompare[`product${j}`].productName) {
+        itemCompare[`product${j}`].ProductNumber += Number(
+          productInfo.ProductNumber
+        );
+        localStorage.setItem(
+          `product${j}`,
+          JSON.stringify(itemCompare[`product${j}`])
+        );
+        return;
+      }
+    }
+    addToLocal();
+    console.log(2);
   } else {
-    localStorage.setItem(
-      `product${localStorage.length + 1}`,
-      JSON.stringify(productInfo)
-    );
-    console.log("else");
+    addToLocal();
   }
 }
+function addToLocal() {
+  localStorage.setItem(
+    `product${localStorage.length + 1}`,
+    JSON.stringify(productInfo)
+  );
+}
+function basketLength() {
+  let theBasketLength = document.querySelector(".bsket-length");
+  let theLengthNumber = 0;
+  for (let i = 1; i <= localStorage.length; i++) {
+    let theItem = JSON.parse(localStorage.getItem(`product${i}`));
+    theLengthNumber += Number(theItem.ProductNumber);
+  }
+  theBasketLength.innerHTML = theLengthNumber;
+}
+basketLength();

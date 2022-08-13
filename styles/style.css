@@ -457,11 +457,12 @@ body {
   background-color: #ff5d5d;
   color: #fff;
   border-radius: 100%;
-  width: 19px;
-  height: 19px;
+  height: 20px;
   text-align: center;
-  line-height: 18px;
-  font-size: 1em;
+  line-height: 16px;
+  font-size: 1.05em;
+  font-family: "B-yekan";
+  padding: 0px 5px;
 }
 .sub-menu-button {
   width: 33px;
@@ -784,7 +785,7 @@ body {
   transition: all 0.3s;
 }
 .backward {
-  right: 0px;
+  right: 10px;
 }
 .backward::before {
   content: "\f105";
@@ -792,7 +793,7 @@ body {
   font-weight: bold;
 }
 .forward {
-  left: 0px;
+  left: 10px;
 }
 .forward::before {
   content: "\f104";
