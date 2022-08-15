@@ -122,6 +122,9 @@
   .basket-list {
     height: 100%;
   }
+  .move-slide {
+    display: none;
+  }
 }
 @media all and (min-width: 576px) {
   .sm-width-col-1 {
@@ -224,6 +227,9 @@
     padding-left: 8px;
   }
   .more-toys {
+    display: none;
+  }
+  .move-slide {
     display: none;
   }
 }
@@ -330,6 +336,9 @@
   .more-toys {
     display: none;
   }
+  .move-slide {
+    display: none;
+  }
 }
 @media all and (min-width: 992px) {
   .lg-width-col-1 {
@@ -433,6 +442,9 @@
   }
   .more-toys {
     display: block;
+  }
+  .move-slide {
+    display: flex;
   }
 }
 @media all and (min-width: 1200px) {

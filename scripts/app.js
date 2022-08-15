@@ -15,6 +15,7 @@ let aboutImages = document.querySelectorAll(".boy-image");
 let relatedProducts = document.querySelectorAll(".related-produtects");
 let moveButtons = document.querySelectorAll(`.move-slide`);
 let addButtons = document.querySelectorAll(".product-add-card");
+let theUlSlide = document.querySelectorAll(".slide-list");
 let productInfo = {};
 
 submenuButton.addEventListener("click", showSubMenu);
@@ -187,64 +188,28 @@ function showAllProducts(products) {
     prod.classList.remove("dis-none");
   }
 }
+let slideVal = 0;
 function moveSlider() {
   let theUl = this.parentElement.firstElementChild.nextElementSibling;
-  let theULChildNumber = theUl.children;
-  let theLIftValue = theUl.firstElementChild;
-  theULChildNumber = theULChildNumber.length;
-  theLIftValue = returnProp(theLIftValue, "width");
-  let ulRight = returnProp(theUl, "right");
+  let theElement = theUl.firstElementChild;
+  theElement = returnProp(theElement, "width");
+  let moveNum = theUl.children;
+  menubar = moveNum.length;
   if (this.classList.contains("forward")) {
-    if (window.innerWidth < 567) {
-      if (ulRight >= -theLIftValue * (theULChildNumber - 2)) {
-        showAllTheMoveButtons(theUl);
-        theUl.style.right = `${ulRight - theLIftValue}px`;
-        if (ulRight == -theLIftValue * (theULChildNumber - 2)) {
-          this.classList.replace("opa-1", "opa-0");
-        }
-      }
-    } else if (window.innerWidth >= 567 && window.innerWidth < 992) {
-      if (ulRight >= -theLIftValue * (theULChildNumber - 3)) {
-        showAllTheMoveButtons(theUl);
-        theUl.style.right = `${ulRight - theLIftValue}px`;
-        if (ulRight == -theLIftValue * (theULChildNumber - 3)) {
-          this.classList.replace("opa-1", "opa-0");
-        }
-      }
-    } else if (window.innerWidth >= 992) {
-      if (ulRight >= -theLIftValue * (theULChildNumber - 5)) {
-        showAllTheMoveButtons(theUl);
-        theUl.style.right = `${ulRight - theLIftValue}px`;
-        if (ulRight == -theLIftValue * (theULChildNumber - 5)) {
-          this.classList.replace("opa-1", "opa-0");
-        }
-      }
+    slideVal -= theElement;
+    theUl.scrollLeft = slideVal;
+    showAllTheMoveButtons(theUl);
+    if (theUl.scrollLeft == moveNum - 5) {
+      this.classList.replace("opa-1", "opa-0");
     }
   } else {
-    if (window.innerWidth < 567) {
-      if (ulRight < 0) {
-        showAllTheMoveButtons(theUl);
-        theUl.style.right = `${ulRight + theLIftValue}px`;
-        if (ulRight == -theLIftValue) {
-          this.classList.replace("opa-1", "opa-0");
-        }
-      }
-    } else if (window.innerWidth >= 567 && window.innerWidth < 992) {
-      if (ulRight < 0) {
-        showAllTheMoveButtons(theUl);
-        theUl.style.right = `${ulRight + theLIftValue}px`;
-        if (ulRight == -theLIftValue) {
-          this.classList.replace("opa-1", "opa-0");
-        }
-      }
-    } else if (window.innerWidth >= 992) {
-      if (ulRight < 0) {
-        showAllTheMoveButtons(theUl);
-        theUl.style.right = `${ulRight + theLIftValue}px`;
-        if (ulRight == -theLIftValue) {
-          this.classList.replace("opa-1", "opa-0");
-        }
-      }
+    slideVal += theElement;
+    theUl.scrollLeft = slideVal;
+    showAllTheMoveButtons(theUl);
+    console.log(theUl.scrollLeft);
+    if (theUl.scrollLeft >= -theElement) {
+      this.classList.replace("opa-1", "opa-0");
+      slideVal = 0;
     }
   }
 }
@@ -267,24 +232,6 @@ function interfeerOrNot(ulRight, liftRight) {
     return true;
   }
 }
-// Every one millisecond checks if result of right value of UL element divided to width of li element of the ul is not equal to zero, it sets the right value of ul to zero and hides the back buttons
-setInterval(function () {
-  let theUlRight = document.querySelectorAll(".slide-list");
-  for (let element of theUlRight) {
-    let rightVal = returnProp(element, "width");
-    if (rightVal != 0) {
-      let liftVal = returnProp(element.firstElementChild, "width");
-      if (!interfeerOrNot(rightVal, liftVal)) {
-        let buttons = document.querySelectorAll(
-          `#${element.parentElement.id} > span`
-        );
-        buttons[0].classList.replace("opa-1", "opa-0");
-        element.style.right = `0px`;
-      }
-    }
-  }
-}, 1);
-
 function addTocard() {
   productInfo["productName"] =
     this.parentElement.parentElement.firstElementChild.innerText;

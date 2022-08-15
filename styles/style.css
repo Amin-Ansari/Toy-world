@@ -864,19 +864,23 @@ body {
 .slide-list {
   flex-flow: row nowrap;
   transition: all 0.3s;
-  position: relative;
-  top: 0px;
-  right: 0px;
+  scroll-snap-type: x mandatory;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.slide-list::-webkit-scrollbar {
+  display: none;
 }
 .slide-list > li {
   transition: all 0.3s;
   opacity: 0;
   transform: scale(0);
   flex-shrink: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 .category-examples {
   position: relative;
-  overflow: hidden;
 }
 .move-slide {
   width: 50px;
