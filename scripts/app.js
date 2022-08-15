@@ -199,15 +199,16 @@ function moveSlider() {
     slideVal -= theElement;
     theUl.scrollLeft = slideVal;
     showAllTheMoveButtons(theUl);
-    if (theUl.scrollLeft == moveNum - 5) {
+    console.log(-(theElement * (menubar - 4)));
+    console.log(theUl.scrollLeft);
+    if (theUl.scrollLeft <= -(theElement * (menubar - 5))) {
       this.classList.replace("opa-1", "opa-0");
     }
   } else {
     slideVal += theElement;
     theUl.scrollLeft = slideVal;
     showAllTheMoveButtons(theUl);
-    console.log(theUl.scrollLeft);
-    if (theUl.scrollLeft >= -theElement) {
+    if (theUl.scrollLeft <= -theElement) {
       this.classList.replace("opa-1", "opa-0");
       slideVal = 0;
     }
