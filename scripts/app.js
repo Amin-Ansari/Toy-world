@@ -188,7 +188,6 @@ function showAllProducts(products) {
     prod.classList.remove("dis-none");
   }
 }
-let slideVal = 0;
 function moveSlider() {
   let theUl = this.parentElement.firstElementChild.nextElementSibling;
   let theElement = theUl.firstElementChild;
@@ -196,21 +195,19 @@ function moveSlider() {
   let moveNum = theUl.children;
   menubar = moveNum.length;
   if (this.classList.contains("forward")) {
-    slideVal -= theElement;
-    theUl.scrollLeft = slideVal;
+    theUl.scrollLeft -= theElement;
     showAllTheMoveButtons(theUl);
-    console.log(-(theElement * (menubar - 4)));
     console.log(theUl.scrollLeft);
-    if (theUl.scrollLeft <= -(theElement * (menubar - 5))) {
+    if (theUl.scrollLeft <= -(theElement * 2)) {
       this.classList.replace("opa-1", "opa-0");
     }
   } else {
-    slideVal += theElement;
-    theUl.scrollLeft = slideVal;
+    theUl.scrollLeft += theElement;
     showAllTheMoveButtons(theUl);
-    if (theUl.scrollLeft <= -theElement) {
+    console.log(theUl.scrollLeft);
+
+    if (theUl.scrollLeft >= -293) {
       this.classList.replace("opa-1", "opa-0");
-      slideVal = 0;
     }
   }
 }
