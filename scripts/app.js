@@ -191,23 +191,17 @@ function showAllProducts(products) {
 function moveSlider() {
   let theUl = this.parentElement.firstElementChild.nextElementSibling;
   let theElement = theUl.firstElementChild;
-  theElement = returnProp(theElement, "width");
-  let moveNum = theUl.children;
-  menubar = moveNum.length;
+  theElement = Math.floor(returnProp(theElement, "width"));
   if (this.classList.contains("forward")) {
     theUl.scrollLeft -= theElement;
-    showAllTheMoveButtons(theUl);
-    console.log(theUl.scrollLeft);
-    if (theUl.scrollLeft <= -(theElement * 2)) {
-      this.classList.replace("opa-1", "opa-0");
+    if (theUl.scrollLeft <= -(theElement * 3)) {
+      theUl.scrollLeft = 0;
     }
   } else {
     theUl.scrollLeft += theElement;
     showAllTheMoveButtons(theUl);
-    console.log(theUl.scrollLeft);
-
-    if (theUl.scrollLeft >= -293) {
-      this.classList.replace("opa-1", "opa-0");
+    if (theUl.scrollLeft == 0) {
+      theUl.scrollLeft = -(theElement * 3);
     }
   }
 }
