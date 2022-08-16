@@ -207,14 +207,16 @@ function returnProp(theObject, propValue) {
 // This function checks if all the snap points are scrolled, then hidden the needed button
 setInterval(function () {
   for (let element of theUlSlide) {
+    let theSize = element.firstElementChild;
+    theSize = Math.floor(returnProp(theSize, "width"));
     let backButton = document.querySelector(`#${element.id} > .backward`);
     let forwardButton = document.querySelector(`#${element.id} > .forward`);
-    if (element.scrollLeft >= -250) {
+    if (element.scrollLeft >= -(theSize - 20)) {
       backButton.classList.replace("opa-1", "opa-0");
     } else {
       backButton.classList.replace("opa-0", "opa-1");
     }
-    if (element.scrollLeft <= -600) {
+    if (element.scrollLeft <= -(theSize * 2) + -20) {
       forwardButton.classList.replace("opa-1", "opa-0");
     } else {
       forwardButton.classList.replace("opa-0", "opa-1");
