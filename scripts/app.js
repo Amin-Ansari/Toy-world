@@ -196,7 +196,6 @@ function moveSlider() {
     theUl.scrollLeft -= theElement;
   } else {
     theUl.scrollLeft += theElement;
-    showAllTheMoveButtons(theUl);
   }
 }
 function returnProp(theObject, propValue) {
@@ -204,13 +203,7 @@ function returnProp(theObject, propValue) {
   theValue = theValue.split("px");
   return Number(theValue[0]);
 }
-function showAllTheMoveButtons(UlElement) {
-  let neededId = UlElement.parentElement.id;
-  let buttons = document.querySelectorAll(`#${neededId} > span`);
-  for (let element of buttons) {
-    element.classList.replace("opa-0", "opa-1");
-  }
-}
+
 // This function checks if all the snap points are scrolled, then hidden the needed button
 setInterval(function () {
   for (let element of theUlSlide) {
