@@ -194,15 +194,9 @@ function moveSlider() {
   theElement = Math.floor(returnProp(theElement, "width"));
   if (this.classList.contains("forward")) {
     theUl.scrollLeft -= theElement;
-    if (theUl.scrollLeft <= -(theElement * 3)) {
-      theUl.scrollLeft = 0;
-    }
   } else {
     theUl.scrollLeft += theElement;
     showAllTheMoveButtons(theUl);
-    if (theUl.scrollLeft == 0) {
-      theUl.scrollLeft = -(theElement * 3);
-    }
   }
 }
 function returnProp(theObject, propValue) {
@@ -217,13 +211,23 @@ function showAllTheMoveButtons(UlElement) {
     element.classList.replace("opa-0", "opa-1");
   }
 }
-function interfeerOrNot(ulRight, liftRight) {
-  if (ulRight % liftRight != 0) {
-    return false;
-  } else {
-    return true;
+// This function checks if all the snap points are scrolled, then hidden the needed button
+setInterval(function () {
+  for (let element of theUlSlide) {
+    let backButton = document.querySelector(`#${element.id} > .backward`);
+    let forwardButton = document.querySelector(`#${element.id} > .forward`);
+    if (element.scrollLeft >= -250) {
+      backButton.classList.replace("opa-1", "opa-0");
+    } else {
+      backButton.classList.replace("opa-0", "opa-1");
+    }
+    if (element.scrollLeft <= -600) {
+      forwardButton.classList.replace("opa-1", "opa-0");
+    } else {
+      forwardButton.classList.replace("opa-0", "opa-1");
+    }
   }
-}
+}, 1);
 function addTocard() {
   productInfo["productName"] =
     this.parentElement.parentElement.firstElementChild.innerText;
