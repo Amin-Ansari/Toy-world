@@ -1666,3 +1666,8 @@ input[type="submit"]:hover {
     transform: translateY(-8px);
   }
 }
+.author-link {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1rem;
+}
